@@ -33,6 +33,10 @@ export function buildIndex(root) {
     if (!r.title) errors.push(`${r.id}: missing title`)
     if (!r.synopsis) errors.push(`${r.id}: missing synopsis`)
     if (r.episode && !episodeIds.has(r.episode)) errors.push(`${r.id}: unknown episode "${r.episode}"`)
+    for (const rel of r.related ?? []) {
+      if (!episodeIds.has(rel.episode)) errors.push(`${r.id}: related to unknown episode "${rel.episode}"`)
+      if (rel.episode === r.episode) errors.push(`${r.id}: related episode "${rel.episode}" is already its own episode`)
+    }
     for (const a of r.attachments ?? []) {
       const p = join(root, 'attachments', r.id, a.file)
       if (!existsSync(p)) errors.push(`${r.id}: missing attachment ${a.file}`)

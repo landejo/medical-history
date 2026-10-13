@@ -933,6 +933,21 @@ button {
   text-decoration: none;
   filter: brightness(0.97);
 }
+.detail .ep-link.related {
+  background: transparent;
+  border: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.detail .related-note {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin-top: 6px;
+  max-width: 52ch;
+}
+.related-list li {
+  flex-direction: column;
+  gap: 2px;
+  justify-content: flex-start;
+}
 .detail .ep-link svg {
   width: 13px;
   height: 13px;

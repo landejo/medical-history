@@ -84,6 +84,8 @@ export interface MedRecord {
   provider?: Provider
   /** Episode id this record belongs to, if any. */
   episode?: string
+  /** Episodes this record is connected to without being part of them, e.g. an early signal. */
+  related?: { episode: string; note: string }[]
   /** Plain-English summary. */
   synopsis: string
   findings?: Finding[]

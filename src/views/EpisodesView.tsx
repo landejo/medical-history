@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 import { Timeline } from '../components/Timeline'
 import { FindingTag, StatusPill } from '../components/Tag'
 import { useStore } from '../data/store'
-import { formatRange, plural } from '../lib/format'
+import { formatDate, formatRange, plural } from '../lib/format'
 import { hrefFor } from '../lib/router'
 import { buildTimeline, recordsForEpisode } from '../lib/timeline'
 import type { Episode, Sentiment } from '../types'
@@ -55,6 +55,9 @@ export function EpisodeView({ episodeId, activeId }: { episodeId: string; active
     )
   const bySentiment: Record<Sentiment, { text: string; recordId: string }[]> = { negative: [], watch: [], positive: [], neutral: [] }
   for (const r of recs) for (const f of r.findings ?? []) bySentiment[f.sentiment].push({ text: f.text, recordId: r.id })
+  const related = index.records
+    .flatMap((r) => (r.related ?? []).filter((rel) => rel.episode === episode.id).map((rel) => ({ record: r, note: rel.note })))
+    .sort((a, b) => (a.record.date < b.record.date ? -1 : 1))
   const imageCount = recs.reduce((n, r) => n + (r.attachments ?? []).filter((a) => a.kind === 'image').length, 0)
   const docCount = recs.reduce((n, r) => n + (r.attachments ?? []).filter((a) => a.kind !== 'image').length + (r.report ? 1 : 0), 0)
   return (
@@ -76,6 +79,21 @@ export function EpisodeView({ episodeId, activeId }: { episodeId: string; active
           <a className="btn" href={hrefFor({ name: 'add', episodeId: episode.id })} style={{ marginTop: 8 }}><Plus /> Add a record to this episode</a>
         </div>
         <div>
+          {related.length > 0 && (
+            <div className="aside-card">
+              <h3>Possible early signals</h3>
+              <ul className="list related-list">
+                {related.map(({ record, note }) => (
+                  <li key={record.id}>
+                    <a href={hrefFor({ name: 'timeline', recordId: record.id })}>
+                      <span className="mono muted">{formatDate(record.date, record.datePrecision)}</span> {record.title}
+                    </a>
+                    <span className="muted small">{note}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           {(['negative', 'watch', 'positive'] as Sentiment[]).map((s) =>
             bySentiment[s].length ? (
               <div className="aside-card" key={s}>

@@ -131,6 +131,17 @@ export function DetailPanel({ record, closeHref }: { record: MedRecord; closeHre
             <Layers /> Part of: {episode.title} <ChevronRight />
           </a>
         )}
+        {(record.related ?? []).map((rel) => {
+          const ep = index?.episodes.find((e) => e.id === rel.episode)
+          return ep ? (
+            <a key={rel.episode} className="ep-link related" href={hrefFor({ name: 'episodes', episodeId: ep.id })} title={rel.note}>
+              <Layers /> Possible early signal for: {ep.title} <ChevronRight />
+            </a>
+          ) : null
+        })}
+        {(record.related ?? []).map((rel) => (
+          <p key={rel.episode + '-note'} className="related-note">{rel.note}</p>
+        ))}
 
         <div className="section">
           <h3>In plain English</h3>

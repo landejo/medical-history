@@ -10,6 +10,7 @@ function recordBlock(r: MedRecord): string {
   const who = [r.provider?.name, r.provider?.specialty, r.provider?.facility].filter(Boolean).join(', ')
   if (who) lines.push(`Provider: ${who}`)
   if (r.episode) lines.push(`Episode: ${r.episode}`)
+  for (const rel of r.related ?? []) lines.push(`Related to episode ${rel.episode} (not part of it): ${rel.note}`)
   lines.push(`Summary: ${r.synopsis}`)
   if (r.findings?.length) lines.push('Findings: ' + r.findings.map((f) => `${f.text} (${f.sentiment})`).join('; '))
   if (r.values?.length) lines.push('Results: ' + r.values.map((v) => `${v.name} ${v.value}${v.unit ? ' ' + v.unit : ''}${v.range ? ' (ref ' + v.range + ')' : ''}${v.flag && v.flag !== 'normal' ? ' ' + v.flag.toUpperCase() : ''}`).join('; '))
