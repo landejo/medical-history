@@ -1,0 +1,103 @@
+{
+  "id": "2021-05-14-annual-labs",
+  "date": "2021-05-14",
+  "type": "lab",
+  "title": "Annual fasting labs",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "synopsis": "Everything in range. Cholesterol was fine this year (LDL 96). Vitamin D slightly on the low side of normal.",
+  "findings": [
+    {
+      "text": "All results within normal range",
+      "sentiment": "positive"
+    }
+  ],
+  "values": [
+    {
+      "name": "Total cholesterol",
+      "value": 184,
+      "unit": "mg/dL",
+      "range": "< 200",
+      "high": 200,
+      "flag": "normal"
+    },
+    {
+      "name": "LDL cholesterol",
+      "value": 96,
+      "unit": "mg/dL",
+      "range": "< 100",
+      "high": 100,
+      "flag": "normal"
+    },
+    {
+      "name": "HDL cholesterol",
+      "value": 52,
+      "unit": "mg/dL",
+      "range": "> 40",
+      "low": 40,
+      "flag": "normal"
+    },
+    {
+      "name": "Triglycerides",
+      "value": 110,
+      "unit": "mg/dL",
+      "range": "< 150",
+      "high": 150,
+      "flag": "normal"
+    },
+    {
+      "name": "Hemoglobin A1c",
+      "value": 5.3,
+      "unit": "%",
+      "range": "< 5.7",
+      "high": 5.7,
+      "flag": "normal"
+    },
+    {
+      "name": "Fasting glucose",
+      "value": 88,
+      "unit": "mg/dL",
+      "range": "70–99",
+      "low": 70,
+      "high": 99,
+      "flag": "normal"
+    },
+    {
+      "name": "Creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "range": "0.7–1.3",
+      "low": 0.7,
+      "high": 1.3,
+      "flag": "normal"
+    },
+    {
+      "name": "ALT",
+      "value": 24,
+      "unit": "U/L",
+      "range": "7–55",
+      "low": 7,
+      "high": 55,
+      "flag": "normal"
+    },
+    {
+      "name": "Vitamin D, 25-OH",
+      "value": 31,
+      "unit": "ng/mL",
+      "range": "30–100",
+      "low": 30,
+      "high": 100,
+      "flag": "normal"
+    }
+  ],
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

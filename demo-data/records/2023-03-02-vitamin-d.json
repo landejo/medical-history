@@ -1,0 +1,19 @@
+{
+  "id": "2023-03-02-vitamin-d",
+  "date": "2023-03-02",
+  "type": "medication",
+  "title": "Started vitamin D3 2,000 IU daily",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "synopsis": "Over-the-counter vitamin D3 started because the February level was low. Taken with breakfast.",
+  "tags": [
+    "supplement"
+  ],
+  "source": {
+    "portal": "Self-reported",
+    "importedOn": "2026-10-12"
+  }
+}

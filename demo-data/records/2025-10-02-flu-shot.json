@@ -1,0 +1,17 @@
+{
+  "id": "2025-10-02-flu-shot",
+  "date": "2025-10-02",
+  "type": "vaccine",
+  "title": "Flu shot (2025–26)",
+  "provider": {
+    "facility": "Walgreens pharmacy"
+  },
+  "synopsis": "Seasonal influenza vaccine.",
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "Walgreens",
+    "importedOn": "2026-10-12"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "2023-09-28-flu-shot",
+  "date": "2023-09-28",
+  "type": "vaccine",
+  "title": "Flu shot (2023–24)",
+  "provider": {
+    "facility": "Walgreens pharmacy"
+  },
+  "synopsis": "Seasonal influenza vaccine.",
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "Walgreens",
+    "importedOn": "2026-10-12"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "2024-04-18-acl-reconstruction",
+  "date": "2024-04-18",
+  "type": "procedure",
+  "title": "ACL reconstruction + meniscus repair",
+  "provider": {
+    "name": "Dr. Marcus Oyelaran",
+    "specialty": "Orthopedic surgery",
+    "facility": "Pacific Orthopedic Institute"
+  },
+  "episode": "acl-right-2024",
+  "synopsis": "Outpatient surgery under general anesthesia. The torn ACL was replaced with a graft from the kneecap tendon, and the meniscus tear was stitched. No complications; home the same day with a locked brace and a nerve block for pain.",
+  "findings": [
+    {
+      "text": "Surgery completed without complications",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Meniscus repaired (not trimmed), so weight-bearing limited 4 weeks",
+      "sentiment": "watch"
+    }
+  ],
+  "reportFile": "operative-report.md",
+  "attachments": [
+    {
+      "file": "operative-report.md",
+      "kind": "document",
+      "label": "Operative report"
+    },
+    {
+      "file": "arthroscopy-1.svg",
+      "kind": "image",
+      "label": "Arthroscopic view: graft in place"
+    }
+  ],
+  "tags": [
+    "knee",
+    "surgery"
+  ],
+  "source": {
+    "portal": "Pacific Ortho portal",
+    "importedOn": "2026-10-12"
+  }
+}

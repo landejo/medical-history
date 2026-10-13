@@ -1,0 +1,37 @@
+{
+  "id": "2024-03-09-urgent-care-knee",
+  "date": "2024-03-09",
+  "type": "visit",
+  "title": "Urgent care: right knee injury",
+  "episode": "acl-right-2024",
+  "provider": {
+    "name": "Dr. Tom Ferreira",
+    "specialty": "Urgent care",
+    "facility": "CityMed Urgent Care"
+  },
+  "synopsis": "Felt a pop in the right knee while pivoting during soccer; the knee swelled within an hour. X-rays showed no fracture. Exam suggested a ligament injury, so an MRI and orthopedic referral were ordered. Sent home with a brace and crutches.",
+  "findings": [
+    {
+      "text": "Suspected ACL injury (positive Lachman test)",
+      "sentiment": "negative"
+    },
+    {
+      "text": "No fracture on X-ray",
+      "sentiment": "positive"
+    }
+  ],
+  "attachments": [
+    {
+      "file": "knee-xray-ap.svg",
+      "kind": "image",
+      "label": "Knee X-ray, AP"
+    }
+  ],
+  "tags": [
+    "knee"
+  ],
+  "source": {
+    "portal": "CityMed patient portal",
+    "importedOn": "2026-10-12"
+  }
+}

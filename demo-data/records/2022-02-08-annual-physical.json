@@ -1,0 +1,25 @@
+{
+  "id": "2022-02-08-annual-physical",
+  "date": "2022-02-08",
+  "type": "visit",
+  "title": "Annual physical",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "synopsis": "Routine check-up, moved earlier in the year. Weight up about 8 lb from last year. Labs ordered; cholesterol came back borderline high two days later.",
+  "findings": [
+    {
+      "text": "Weight up 8 lb year over year",
+      "sentiment": "watch"
+    }
+  ],
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "2025-04-10-sleep-consult",
+  "date": "2025-04-10",
+  "type": "visit",
+  "title": "Sleep medicine consult",
+  "provider": {
+    "name": "Dr. Elena Castillo",
+    "specialty": "Sleep medicine",
+    "facility": "Bayside Sleep Center"
+  },
+  "episode": "sleep-2025",
+  "synopsis": "Because the apnea is mild and mostly positional, agreed to try positional therapy (side-sleeping device) and a weight-loss target of 10 lb before trying CPAP. Repeat home study in about a year.",
+  "findings": [
+    {
+      "text": "Positional therapy + weight loss first; CPAP if no improvement",
+      "sentiment": "neutral"
+    }
+  ],
+  "followUp": [
+    {
+      "text": "Repeat home sleep study",
+      "due": "2027-01-15"
+    }
+  ],
+  "tags": [
+    "sleep"
+  ],
+  "source": {
+    "portal": "Bayside Sleep Center",
+    "importedOn": "2026-10-12"
+  }
+}

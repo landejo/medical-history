@@ -1,0 +1,30 @@
+{
+  "id": "2024-05-02-post-op",
+  "date": "2024-05-02",
+  "type": "visit",
+  "title": "Post-op visit, 2 weeks",
+  "provider": {
+    "name": "Dr. Marcus Oyelaran",
+    "specialty": "Orthopedic surgery",
+    "facility": "Pacific Orthopedic Institute"
+  },
+  "episode": "acl-right-2024",
+  "synopsis": "Incisions healing well, stitches removed. Full extension already achieved, which is the most important early milestone. Cleared to start formal physical therapy.",
+  "findings": [
+    {
+      "text": "Full extension achieved at 2 weeks",
+      "sentiment": "positive"
+    },
+    {
+      "text": "No signs of infection",
+      "sentiment": "positive"
+    }
+  ],
+  "tags": [
+    "knee"
+  ],
+  "source": {
+    "portal": "Pacific Ortho portal",
+    "importedOn": "2026-10-12"
+  }
+}

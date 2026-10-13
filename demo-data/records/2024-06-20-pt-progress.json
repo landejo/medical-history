@@ -1,0 +1,31 @@
+{
+  "id": "2024-06-20-pt-progress",
+  "date": "2024-06-20",
+  "type": "therapy",
+  "title": "Physical therapy progress note, week 9",
+  "episode": "acl-right-2024",
+  "provider": {
+    "name": "Jordan Lee, DPT",
+    "specialty": "Physical therapy",
+    "facility": "Bayside Sports PT"
+  },
+  "synopsis": "Range of motion back to normal. Quad strength on the right is about 65% of the left; the goal before running is 80%. Walking without a limp. Stationary bike and leg press progressing.",
+  "findings": [
+    {
+      "text": "ROM 0–135°, normal",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Quad strength 65% of uninjured side (goal 80% to run)",
+      "sentiment": "watch"
+    }
+  ],
+  "tags": [
+    "knee",
+    "rehab"
+  ],
+  "source": {
+    "portal": "Bayside Sports PT",
+    "importedOn": "2026-10-12"
+  }
+}

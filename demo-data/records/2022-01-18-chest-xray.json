@@ -1,0 +1,42 @@
+{
+  "id": "2022-01-18-chest-xray",
+  "date": "2022-01-18",
+  "type": "imaging",
+  "title": "Chest X-ray, 2 views",
+  "provider": {
+    "name": "Dr. Lina Haddad",
+    "specialty": "Radiology",
+    "facility": "CityMed Urgent Care"
+  },
+  "synopsis": "Chest X-ray taken for a lingering cough. Lungs were clear, heart size normal, no signs of pneumonia or anything concerning.",
+  "findings": [
+    {
+      "text": "Lungs clear, no pneumonia",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Normal heart size",
+      "sentiment": "positive"
+    }
+  ],
+  "report": "**EXAM:** Chest, PA and lateral.\n\n**INDICATION:** Cough x 3 weeks.\n\n**FINDINGS:** Lungs are clear. No focal consolidation, effusion, or pneumothorax. Cardiomediastinal silhouette is normal. Osseous structures unremarkable.\n\n**IMPRESSION:** No acute cardiopulmonary process.",
+  "attachments": [
+    {
+      "file": "cxr-pa.svg",
+      "kind": "image",
+      "label": "PA view"
+    },
+    {
+      "file": "cxr-lat.svg",
+      "kind": "image",
+      "label": "Lateral view"
+    }
+  ],
+  "tags": [
+    "respiratory"
+  ],
+  "source": {
+    "portal": "CityMed patient portal",
+    "importedOn": "2026-10-12"
+  }
+}

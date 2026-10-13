@@ -1,0 +1,32 @@
+{
+  "id": "2022-03-01-cholesterol-plan",
+  "date": "2022-03-01",
+  "type": "visit",
+  "title": "Cholesterol follow-up: lifestyle plan",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "episode": "cholesterol",
+  "synopsis": "Discussed the high LDL. Because the 10-year heart risk is low, agreed to try six months of lifestyle changes before considering a statin: Mediterranean-style eating, fewer refined carbs, 150 minutes a week of moderate cardio, and daily fish oil.",
+  "findings": [
+    {
+      "text": "10-year cardiovascular risk estimated at 3.1% (low)",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Lifestyle plan instead of statin, re-check in 6 months",
+      "sentiment": "neutral"
+    }
+  ],
+  "report": "## Assessment\n\nHyperlipidemia, LDL 142. ASCVD 10-year risk 3.1%. Family history negative for premature CAD.\n\n## Plan\n\n1. Therapeutic lifestyle changes: Mediterranean diet pattern, limit saturated fat < 7% of calories, add 25–30 g/day soluble fiber.\n2. Exercise: 150 min/week moderate aerobic activity plus 2 resistance sessions.\n3. Omega-3 1 g daily.\n4. Repeat fasting lipid panel in 6 months. Consider moderate-intensity statin if LDL remains > 130.",
+  "tags": [
+    "lipids",
+    "lifestyle"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

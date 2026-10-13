@@ -1,0 +1,30 @@
+{
+  "id": "2021-05-12-annual-physical",
+  "date": "2021-05-12",
+  "type": "visit",
+  "title": "Annual physical",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "synopsis": "Routine yearly check-up. Blood pressure, weight, and exam were all normal. Tdap booster given since the last one was more than ten years ago. No concerns raised.",
+  "findings": [
+    {
+      "text": "Blood pressure 118/76, normal",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Tdap booster administered",
+      "sentiment": "neutral"
+    }
+  ],
+  "report": "## Assessment\n\nHealthy 39-year-old male, no acute complaints. Vitals within normal limits (BP 118/76, HR 64, BMI 25.1).\n\n## Plan\n\n- Tdap booster given today (left deltoid, lot DEMO-4411).\n- Fasting labs ordered.\n- Return in 12 months.",
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

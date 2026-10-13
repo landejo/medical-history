@@ -1,0 +1,72 @@
+{
+  "id": "2022-08-16-lipid-panel",
+  "date": "2022-08-16",
+  "type": "lab",
+  "title": "Lipid panel, 6-month re-check",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "episode": "cholesterol",
+  "synopsis": "Six months of diet and exercise brought LDL down from 142 to 128. Still above target, but moving the right way, so the plan continued without medication.",
+  "findings": [
+    {
+      "text": "LDL down 14 points to 128",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Still above the < 100 target",
+      "sentiment": "watch"
+    }
+  ],
+  "values": [
+    {
+      "name": "Total cholesterol",
+      "value": 198,
+      "unit": "mg/dL",
+      "range": "< 200",
+      "high": 200,
+      "flag": "normal"
+    },
+    {
+      "name": "LDL cholesterol",
+      "value": 128,
+      "unit": "mg/dL",
+      "range": "< 100",
+      "high": 100,
+      "flag": "high"
+    },
+    {
+      "name": "HDL cholesterol",
+      "value": 51,
+      "unit": "mg/dL",
+      "range": "> 40",
+      "low": 40,
+      "flag": "normal"
+    },
+    {
+      "name": "Triglycerides",
+      "value": 121,
+      "unit": "mg/dL",
+      "range": "< 150",
+      "high": 150,
+      "flag": "normal"
+    },
+    {
+      "name": "Hemoglobin A1c",
+      "value": 5.4,
+      "unit": "%",
+      "range": "< 5.7",
+      "high": 5.7,
+      "flag": "normal"
+    }
+  ],
+  "tags": [
+    "lipids"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

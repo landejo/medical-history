@@ -1,0 +1,1770 @@
+{
+  "generatedAt": "2026-10-13T06:58:40.102Z",
+  "demo": true,
+  "profile": {
+    "name": "Demo Patient",
+    "dob": "1981-06-14",
+    "bloodType": "O+",
+    "allergies": [
+      {
+        "name": "Penicillin",
+        "reaction": "Hives",
+        "severity": "moderate"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Vitamin D3",
+        "dose": "2,000 IU",
+        "frequency": "daily",
+        "since": "2023-03-02",
+        "reason": "Low vitamin D"
+      },
+      {
+        "name": "Omega-3 fish oil",
+        "dose": "1 g",
+        "frequency": "daily",
+        "since": "2022-03-01",
+        "reason": "Cholesterol (lifestyle plan)"
+      }
+    ],
+    "conditions": [
+      {
+        "name": "Borderline high cholesterol",
+        "since": "2022-02-10",
+        "status": "improving with lifestyle changes"
+      },
+      {
+        "name": "Mild obstructive sleep apnea",
+        "since": "2025-03-18",
+        "status": "managed with positional therapy and weight loss"
+      },
+      {
+        "name": "Right ACL reconstruction (2024)",
+        "since": "2024-04-18",
+        "status": "recovered"
+      }
+    ],
+    "careTeam": [
+      {
+        "name": "Dr. Priya Raman",
+        "role": "Primary care",
+        "facility": "Bayside Family Medicine",
+        "phone": "(415) 555-0142"
+      },
+      {
+        "name": "Dr. Marcus Oyelaran",
+        "role": "Orthopedic surgeon",
+        "facility": "Pacific Orthopedic Institute"
+      },
+      {
+        "name": "Dr. Elena Castillo",
+        "role": "Sleep medicine",
+        "facility": "Bayside Sleep Center"
+      },
+      {
+        "name": "Dr. Hannah Zhou",
+        "role": "Dermatology",
+        "facility": "Marina Dermatology"
+      }
+    ],
+    "screenings": [
+      {
+        "name": "Colonoscopy",
+        "last": "2023-10-06",
+        "due": "2030-10-06",
+        "note": "One small benign polyp removed; 7-year interval"
+      },
+      {
+        "name": "Lipid panel",
+        "last": "2026-02-11",
+        "due": "2027-02-11"
+      },
+      {
+        "name": "Skin check",
+        "last": "2025-06-03",
+        "due": "2026-06-03"
+      },
+      {
+        "name": "Eye exam",
+        "last": "2024-08-21",
+        "due": "2026-08-21"
+      },
+      {
+        "name": "Tetanus (Tdap) booster",
+        "last": "2021-05-12",
+        "due": "2031-05-12"
+      },
+      {
+        "name": "Flu shot",
+        "last": "2025-10-02",
+        "due": "2026-10-01"
+      }
+    ],
+    "emergency": {
+      "contact": "Sam Patient (spouse)",
+      "phone": "(415) 555-0199",
+      "notes": "Penicillin allergy. No blood thinners."
+    }
+  },
+  "episodes": [
+    {
+      "id": "sleep-2025",
+      "title": "Snoring, fatigue, and sleep apnea evaluation",
+      "started": "2025-02-19",
+      "status": "active",
+      "kind": "condition",
+      "summary": "Reported daytime fatigue and loud snoring. A home sleep study showed mild obstructive sleep apnea (AHI 9). Managing with positional therapy and weight loss rather than CPAP for now; repeat study planned for early 2027.",
+      "tags": [
+        "sleep",
+        "ENT"
+      ]
+    },
+    {
+      "id": "acl-right-2024",
+      "title": "Right ACL tear and reconstruction",
+      "started": "2024-03-09",
+      "ended": "2024-11-15",
+      "status": "resolved",
+      "kind": "injury",
+      "summary": "Twisted the right knee during a weekend soccer game. MRI confirmed a complete ACL tear with a small medial meniscus tear. Reconstruction with a patellar tendon autograft in April 2024, followed by seven months of physical therapy. Cleared for full sport in November 2024.",
+      "tags": [
+        "knee",
+        "orthopedics",
+        "surgery"
+      ]
+    },
+    {
+      "id": "cholesterol",
+      "title": "Borderline high cholesterol",
+      "started": "2022-02-10",
+      "status": "monitoring",
+      "kind": "condition",
+      "summary": "LDL first flagged at 142 mg/dL in Feb 2022. Chose a lifestyle-first plan (Mediterranean-style diet, 150 min/week of zone-2 cardio, fish oil) instead of a statin. LDL has fallen steadily each year and reached the under-100 target in 2026.",
+      "tags": [
+        "heart",
+        "lipids",
+        "lifestyle"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "2026-02-13-annual-physical",
+      "date": "2026-02-13",
+      "type": "visit",
+      "title": "Annual physical",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "Weight down 12 lb from the 2025 peak. Blood pressure 116/74. Reviewed the cholesterol win and the sleep plan. Shingles vaccine recommended at 50 (2031). No changes to medications.",
+      "findings": [
+        {
+          "text": "Blood pressure 116/74, weight down 12 lb",
+          "sentiment": "positive"
+        }
+      ],
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2026-02-11-annual-labs",
+      "date": "2026-02-11",
+      "type": "lab",
+      "title": "Annual fasting labs",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "episode": "cholesterol",
+      "synopsis": "LDL reached 98, under the 100 target for the first time since 2021, four years into the lifestyle plan with no medication. Fasting glucose back to normal. Everything else fine.",
+      "findings": [
+        {
+          "text": "LDL 98, at target without medication",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Fasting glucose back to normal (94)",
+          "sentiment": "positive"
+        }
+      ],
+      "values": [
+        {
+          "name": "Total cholesterol",
+          "value": 172,
+          "unit": "mg/dL",
+          "range": "< 200",
+          "high": 200,
+          "flag": "normal"
+        },
+        {
+          "name": "LDL cholesterol",
+          "value": 98,
+          "unit": "mg/dL",
+          "range": "< 100",
+          "high": 100,
+          "flag": "normal"
+        },
+        {
+          "name": "HDL cholesterol",
+          "value": 58,
+          "unit": "mg/dL",
+          "range": "> 40",
+          "low": 40,
+          "flag": "normal"
+        },
+        {
+          "name": "Triglycerides",
+          "value": 96,
+          "unit": "mg/dL",
+          "range": "< 150",
+          "high": 150,
+          "flag": "normal"
+        },
+        {
+          "name": "Hemoglobin A1c",
+          "value": 5.5,
+          "unit": "%",
+          "range": "< 5.7",
+          "high": 5.7,
+          "flag": "normal"
+        },
+        {
+          "name": "Fasting glucose",
+          "value": 94,
+          "unit": "mg/dL",
+          "range": "70–99",
+          "low": 70,
+          "high": 99,
+          "flag": "normal"
+        },
+        {
+          "name": "Creatinine",
+          "value": 0.9,
+          "unit": "mg/dL",
+          "range": "0.7–1.3",
+          "low": 0.7,
+          "high": 1.3,
+          "flag": "normal"
+        },
+        {
+          "name": "ALT",
+          "value": 23,
+          "unit": "U/L",
+          "range": "7–55",
+          "low": 7,
+          "high": 55,
+          "flag": "normal"
+        },
+        {
+          "name": "Vitamin D, 25-OH",
+          "value": 44,
+          "unit": "ng/mL",
+          "range": "30–100",
+          "low": 30,
+          "high": 100,
+          "flag": "normal"
+        }
+      ],
+      "tags": [
+        "preventive",
+        "lipids"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2025-10-02-flu-shot",
+      "date": "2025-10-02",
+      "type": "vaccine",
+      "title": "Flu shot (2025–26)",
+      "provider": {
+        "facility": "Walgreens pharmacy"
+      },
+      "synopsis": "Seasonal influenza vaccine.",
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "Walgreens",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2025-07-22-sleep-followup",
+      "date": "2025-07-22",
+      "type": "visit",
+      "title": "Sleep follow-up, 3 months",
+      "provider": {
+        "name": "Dr. Elena Castillo",
+        "specialty": "Sleep medicine",
+        "facility": "Bayside Sleep Center"
+      },
+      "episode": "sleep-2025",
+      "synopsis": "Down 7 lb and using the side-sleeping device nightly. Snoring much reduced per partner and daytime energy better. Plan unchanged; continue and recheck.",
+      "findings": [
+        {
+          "text": "Symptoms improved with positional therapy and 7 lb weight loss",
+          "sentiment": "positive"
+        }
+      ],
+      "tags": [
+        "sleep"
+      ],
+      "source": {
+        "portal": "Bayside Sleep Center",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2025-06-03-skin-check",
+      "date": "2025-06-03",
+      "type": "visit",
+      "title": "Full-body skin check",
+      "provider": {
+        "name": "Dr. Hannah Zhou",
+        "specialty": "Dermatology",
+        "facility": "Marina Dermatology"
+      },
+      "synopsis": "Annual skin exam. One mole on the upper back was photographed to watch over time; it looked benign. No biopsies needed.",
+      "findings": [
+        {
+          "text": "No suspicious lesions",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Mole on upper back photographed for monitoring",
+          "sentiment": "watch"
+        }
+      ],
+      "attachments": [
+        {
+          "file": "mole-upper-back.svg",
+          "kind": "image",
+          "label": "Dermoscopy photo, upper back"
+        }
+      ],
+      "tags": [
+        "preventive",
+        "skin"
+      ],
+      "source": {
+        "portal": "Marina Dermatology",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2025-04-10-sleep-consult",
+      "date": "2025-04-10",
+      "type": "visit",
+      "title": "Sleep medicine consult",
+      "provider": {
+        "name": "Dr. Elena Castillo",
+        "specialty": "Sleep medicine",
+        "facility": "Bayside Sleep Center"
+      },
+      "episode": "sleep-2025",
+      "synopsis": "Because the apnea is mild and mostly positional, agreed to try positional therapy (side-sleeping device) and a weight-loss target of 10 lb before trying CPAP. Repeat home study in about a year.",
+      "findings": [
+        {
+          "text": "Positional therapy + weight loss first; CPAP if no improvement",
+          "sentiment": "neutral"
+        }
+      ],
+      "followUp": [
+        {
+          "text": "Repeat home sleep study",
+          "due": "2027-01-15"
+        }
+      ],
+      "tags": [
+        "sleep"
+      ],
+      "source": {
+        "portal": "Bayside Sleep Center",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2025-03-18-sleep-study",
+      "date": "2025-03-18",
+      "type": "procedure",
+      "title": "Home sleep apnea test",
+      "provider": {
+        "name": "Dr. Elena Castillo",
+        "specialty": "Sleep medicine",
+        "facility": "Bayside Sleep Center"
+      },
+      "episode": "sleep-2025",
+      "synopsis": "Overnight test at home with a nasal sensor and finger oxygen monitor. Showed mild sleep apnea: breathing paused or shallowed about 9 times per hour, mostly when sleeping on the back. Oxygen dipped to 88% at the lowest point.",
+      "findings": [
+        {
+          "text": "Mild obstructive sleep apnea (AHI 9.2/hr)",
+          "sentiment": "negative"
+        },
+        {
+          "text": "Much worse on back (AHI 18) than on side (AHI 4)",
+          "sentiment": "watch"
+        },
+        {
+          "text": "Lowest oxygen 88%",
+          "sentiment": "watch"
+        }
+      ],
+      "values": [
+        {
+          "name": "AHI (events/hr)",
+          "value": 9.2,
+          "range": "< 5",
+          "high": 5,
+          "flag": "high"
+        },
+        {
+          "name": "AHI supine",
+          "value": 18.1,
+          "range": "< 5",
+          "high": 5,
+          "flag": "high"
+        },
+        {
+          "name": "AHI non-supine",
+          "value": 4,
+          "range": "< 5",
+          "high": 5,
+          "flag": "normal"
+        },
+        {
+          "name": "Lowest SpO2",
+          "value": 88,
+          "unit": "%",
+          "range": "> 90",
+          "low": 90,
+          "flag": "low"
+        }
+      ],
+      "reportFile": "sleep-study-report.md",
+      "attachments": [
+        {
+          "file": "sleep-study-report.md",
+          "kind": "document",
+          "label": "Sleep study report"
+        }
+      ],
+      "tags": [
+        "sleep"
+      ],
+      "source": {
+        "portal": "Bayside Sleep Center",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2025-02-19-pcp-fatigue",
+      "date": "2025-02-19",
+      "type": "visit",
+      "title": "Fatigue and snoring",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "episode": "sleep-2025",
+      "synopsis": "Reported waking unrefreshed and loud snoring noticed by partner. Thyroid was normal on recent labs. A home sleep test was ordered to check for sleep apnea.",
+      "findings": [
+        {
+          "text": "Home sleep study ordered",
+          "sentiment": "neutral"
+        },
+        {
+          "text": "STOP-BANG score 4 (intermediate risk)",
+          "sentiment": "watch"
+        }
+      ],
+      "tags": [
+        "sleep"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2025-02-11-annual-labs",
+      "date": "2025-02-11",
+      "type": "lab",
+      "title": "Annual fasting labs",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "LDL 104, nearly at target. Fasting glucose crept up to 101, just over the line; worth watching with the sleep and weight picture. Vitamin D fine.",
+      "findings": [
+        {
+          "text": "LDL 104, nearly at target",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Fasting glucose 101, slightly high",
+          "sentiment": "watch"
+        }
+      ],
+      "values": [
+        {
+          "name": "Total cholesterol",
+          "value": 181,
+          "unit": "mg/dL",
+          "range": "< 200",
+          "high": 200,
+          "flag": "normal"
+        },
+        {
+          "name": "LDL cholesterol",
+          "value": 104,
+          "unit": "mg/dL",
+          "range": "< 100",
+          "high": 100,
+          "flag": "high"
+        },
+        {
+          "name": "HDL cholesterol",
+          "value": 56,
+          "unit": "mg/dL",
+          "range": "> 40",
+          "low": 40,
+          "flag": "normal"
+        },
+        {
+          "name": "Triglycerides",
+          "value": 118,
+          "unit": "mg/dL",
+          "range": "< 150",
+          "high": 150,
+          "flag": "normal"
+        },
+        {
+          "name": "Hemoglobin A1c",
+          "value": 5.6,
+          "unit": "%",
+          "range": "< 5.7",
+          "high": 5.7,
+          "flag": "normal"
+        },
+        {
+          "name": "Fasting glucose",
+          "value": 101,
+          "unit": "mg/dL",
+          "range": "70–99",
+          "low": 70,
+          "high": 99,
+          "flag": "high"
+        },
+        {
+          "name": "Creatinine",
+          "value": 1,
+          "unit": "mg/dL",
+          "range": "0.7–1.3",
+          "low": 0.7,
+          "high": 1.3,
+          "flag": "normal"
+        },
+        {
+          "name": "ALT",
+          "value": 29,
+          "unit": "U/L",
+          "range": "7–55",
+          "low": 7,
+          "high": 55,
+          "flag": "normal"
+        },
+        {
+          "name": "Vitamin D, 25-OH",
+          "value": 41,
+          "unit": "ng/mL",
+          "range": "30–100",
+          "low": 30,
+          "high": 100,
+          "flag": "normal"
+        }
+      ],
+      "tags": [
+        "preventive",
+        "lipids"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-11-15-return-to-sport",
+      "date": "2024-11-15",
+      "type": "visit",
+      "title": "Return-to-sport clearance",
+      "provider": {
+        "name": "Dr. Marcus Oyelaran",
+        "specialty": "Orthopedic surgery",
+        "facility": "Pacific Orthopedic Institute"
+      },
+      "episode": "acl-right-2024",
+      "synopsis": "Passed the hop and strength tests (right leg within 90% of left). Cleared for full sport including soccer. Advised to keep doing the prevention exercises long term since the re-tear risk is highest in the first two years.",
+      "findings": [
+        {
+          "text": "Cleared for full sport",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Continue ACL prevention program; re-tear risk highest for 2 years",
+          "sentiment": "watch"
+        }
+      ],
+      "tags": [
+        "knee"
+      ],
+      "source": {
+        "portal": "Pacific Ortho portal",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-10-09-flu-covid",
+      "date": "2024-10-09",
+      "type": "vaccine",
+      "title": "Flu shot + COVID-19 booster (2024–25)",
+      "provider": {
+        "facility": "Walgreens pharmacy"
+      },
+      "synopsis": "Seasonal flu vaccine and updated COVID-19 booster, one in each arm.",
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "Walgreens",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-09-12-ortho-5mo",
+      "date": "2024-09-12",
+      "type": "visit",
+      "title": "Ortho follow-up, 5 months",
+      "provider": {
+        "name": "Dr. Marcus Oyelaran",
+        "specialty": "Orthopedic surgery",
+        "facility": "Pacific Orthopedic Institute"
+      },
+      "episode": "acl-right-2024",
+      "synopsis": "Knee stable on exam, strength at 85% of the other side. Cleared to begin straight-line running and a return-to-sport program with PT.",
+      "findings": [
+        {
+          "text": "Graft stable, cleared for running",
+          "sentiment": "positive"
+        }
+      ],
+      "tags": [
+        "knee"
+      ],
+      "source": {
+        "portal": "Pacific Ortho portal",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-08-21-eye-exam",
+      "date": "2024-08-21",
+      "type": "visit",
+      "title": "Routine eye exam",
+      "provider": {
+        "name": "Dr. Kevin Park",
+        "specialty": "Optometry",
+        "facility": "Marina Vision"
+      },
+      "synopsis": "Routine eye exam. Mild nearsightedness unchanged; glasses prescription the same. Retina and eye pressure normal.",
+      "findings": [
+        {
+          "text": "Eye pressure and retina normal",
+          "sentiment": "positive"
+        }
+      ],
+      "tags": [
+        "preventive",
+        "eyes"
+      ],
+      "source": {
+        "portal": "Marina Vision",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-06-20-pt-progress",
+      "date": "2024-06-20",
+      "type": "therapy",
+      "title": "Physical therapy progress note, week 9",
+      "episode": "acl-right-2024",
+      "provider": {
+        "name": "Jordan Lee, DPT",
+        "specialty": "Physical therapy",
+        "facility": "Bayside Sports PT"
+      },
+      "synopsis": "Range of motion back to normal. Quad strength on the right is about 65% of the left; the goal before running is 80%. Walking without a limp. Stationary bike and leg press progressing.",
+      "findings": [
+        {
+          "text": "ROM 0–135°, normal",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Quad strength 65% of uninjured side (goal 80% to run)",
+          "sentiment": "watch"
+        }
+      ],
+      "tags": [
+        "knee",
+        "rehab"
+      ],
+      "source": {
+        "portal": "Bayside Sports PT",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-05-02-post-op",
+      "date": "2024-05-02",
+      "type": "visit",
+      "title": "Post-op visit, 2 weeks",
+      "provider": {
+        "name": "Dr. Marcus Oyelaran",
+        "specialty": "Orthopedic surgery",
+        "facility": "Pacific Orthopedic Institute"
+      },
+      "episode": "acl-right-2024",
+      "synopsis": "Incisions healing well, stitches removed. Full extension already achieved, which is the most important early milestone. Cleared to start formal physical therapy.",
+      "findings": [
+        {
+          "text": "Full extension achieved at 2 weeks",
+          "sentiment": "positive"
+        },
+        {
+          "text": "No signs of infection",
+          "sentiment": "positive"
+        }
+      ],
+      "tags": [
+        "knee"
+      ],
+      "source": {
+        "portal": "Pacific Ortho portal",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-04-18-acl-reconstruction",
+      "date": "2024-04-18",
+      "type": "procedure",
+      "title": "ACL reconstruction + meniscus repair",
+      "provider": {
+        "name": "Dr. Marcus Oyelaran",
+        "specialty": "Orthopedic surgery",
+        "facility": "Pacific Orthopedic Institute"
+      },
+      "episode": "acl-right-2024",
+      "synopsis": "Outpatient surgery under general anesthesia. The torn ACL was replaced with a graft from the kneecap tendon, and the meniscus tear was stitched. No complications; home the same day with a locked brace and a nerve block for pain.",
+      "findings": [
+        {
+          "text": "Surgery completed without complications",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Meniscus repaired (not trimmed), so weight-bearing limited 4 weeks",
+          "sentiment": "watch"
+        }
+      ],
+      "reportFile": "operative-report.md",
+      "attachments": [
+        {
+          "file": "operative-report.md",
+          "kind": "document",
+          "label": "Operative report"
+        },
+        {
+          "file": "arthroscopy-1.svg",
+          "kind": "image",
+          "label": "Arthroscopic view: graft in place"
+        }
+      ],
+      "tags": [
+        "knee",
+        "surgery"
+      ],
+      "source": {
+        "portal": "Pacific Ortho portal",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-03-21-ortho-consult",
+      "date": "2024-03-21",
+      "type": "visit",
+      "title": "Orthopedic consult",
+      "provider": {
+        "name": "Dr. Marcus Oyelaran",
+        "specialty": "Orthopedic surgery",
+        "facility": "Pacific Orthopedic Institute"
+      },
+      "episode": "acl-right-2024",
+      "synopsis": "Reviewed the MRI. Because of an active lifestyle and the meniscus tear, surgery was recommended over rehab alone. Chose a patellar tendon autograft. Three weeks of \"prehab\" first to reduce swelling and restore range of motion.",
+      "findings": [
+        {
+          "text": "ACL reconstruction recommended",
+          "sentiment": "neutral"
+        },
+        {
+          "text": "Prehab for 3–4 weeks before surgery",
+          "sentiment": "neutral"
+        }
+      ],
+      "report": "## Assessment\n\nRight knee ACL rupture with medial meniscus tear in a 42-year-old recreational athlete. Full extension lacking 5°, flexion 110°, moderate effusion.\n\n## Plan\n\n- Prehab PT 3x/week: effusion control, quad activation, ROM to 0–130.\n- ACL reconstruction with bone-patellar tendon-bone autograft and meniscal repair, target mid-April.\n- Reviewed risks: infection, stiffness, graft failure (~5%), anterior knee pain.",
+      "tags": [
+        "knee"
+      ],
+      "source": {
+        "portal": "Pacific Ortho portal",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-03-14-knee-mri",
+      "date": "2024-03-14",
+      "type": "imaging",
+      "title": "MRI, right knee",
+      "episode": "acl-right-2024",
+      "provider": {
+        "name": "Dr. Lina Haddad",
+        "specialty": "Radiology",
+        "facility": "Pacific Imaging"
+      },
+      "synopsis": "MRI confirmed a complete tear of the ACL and a small tear of the inner (medial) meniscus. The other ligaments and cartilage looked healthy, which makes surgical repair more straightforward.",
+      "findings": [
+        {
+          "text": "Complete ACL tear",
+          "sentiment": "negative"
+        },
+        {
+          "text": "Small medial meniscus tear (posterior horn)",
+          "sentiment": "negative"
+        },
+        {
+          "text": "PCL, MCL, LCL and cartilage intact",
+          "sentiment": "positive"
+        }
+      ],
+      "report": "**EXAM:** MRI right knee without contrast.\n\n**FINDINGS:**\n\n- *ACL:* Complete disruption of the mid-substance fibers with abnormal horizontal orientation. Associated bone marrow edema in the lateral femoral condyle and posterolateral tibial plateau (classic pivot-shift pattern).\n- *Menisci:* Vertical longitudinal tear of the posterior horn of the medial meniscus, 8 mm. Lateral meniscus intact.\n- *PCL, MCL, LCL:* Intact.\n- *Cartilage:* Preserved. No full-thickness defects.\n- *Joint:* Moderate effusion.\n\n**IMPRESSION:**\n\n1. Complete ACL tear with typical bone contusion pattern.\n2. Posterior horn medial meniscus tear.\n3. Moderate joint effusion.",
+      "attachments": [
+        {
+          "file": "mri-sag-t2.svg",
+          "kind": "image",
+          "label": "Sagittal T2"
+        },
+        {
+          "file": "mri-cor-pd.svg",
+          "kind": "image",
+          "label": "Coronal PD"
+        },
+        {
+          "file": "mri-ax.svg",
+          "kind": "image",
+          "label": "Axial"
+        }
+      ],
+      "tags": [
+        "knee"
+      ],
+      "source": {
+        "portal": "Pacific Imaging portal",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-03-09-urgent-care-knee",
+      "date": "2024-03-09",
+      "type": "visit",
+      "title": "Urgent care: right knee injury",
+      "episode": "acl-right-2024",
+      "provider": {
+        "name": "Dr. Tom Ferreira",
+        "specialty": "Urgent care",
+        "facility": "CityMed Urgent Care"
+      },
+      "synopsis": "Felt a pop in the right knee while pivoting during soccer; the knee swelled within an hour. X-rays showed no fracture. Exam suggested a ligament injury, so an MRI and orthopedic referral were ordered. Sent home with a brace and crutches.",
+      "findings": [
+        {
+          "text": "Suspected ACL injury (positive Lachman test)",
+          "sentiment": "negative"
+        },
+        {
+          "text": "No fracture on X-ray",
+          "sentiment": "positive"
+        }
+      ],
+      "attachments": [
+        {
+          "file": "knee-xray-ap.svg",
+          "kind": "image",
+          "label": "Knee X-ray, AP"
+        }
+      ],
+      "tags": [
+        "knee"
+      ],
+      "source": {
+        "portal": "CityMed patient portal",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2024-02-20-annual-labs",
+      "date": "2024-02-20",
+      "type": "lab",
+      "title": "Annual fasting labs",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "LDL 112, still trending down. Vitamin D back to normal (38) on the supplement. Blood sugar, kidney and liver all normal.",
+      "findings": [
+        {
+          "text": "LDL 112, close to target",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Vitamin D normalized (38 ng/mL)",
+          "sentiment": "positive"
+        }
+      ],
+      "values": [
+        {
+          "name": "Total cholesterol",
+          "value": 186,
+          "unit": "mg/dL",
+          "range": "< 200",
+          "high": 200,
+          "flag": "normal"
+        },
+        {
+          "name": "LDL cholesterol",
+          "value": 112,
+          "unit": "mg/dL",
+          "range": "< 100",
+          "high": 100,
+          "flag": "high"
+        },
+        {
+          "name": "HDL cholesterol",
+          "value": 55,
+          "unit": "mg/dL",
+          "range": "> 40",
+          "low": 40,
+          "flag": "normal"
+        },
+        {
+          "name": "Triglycerides",
+          "value": 105,
+          "unit": "mg/dL",
+          "range": "< 150",
+          "high": 150,
+          "flag": "normal"
+        },
+        {
+          "name": "Hemoglobin A1c",
+          "value": 5.4,
+          "unit": "%",
+          "range": "< 5.7",
+          "high": 5.7,
+          "flag": "normal"
+        },
+        {
+          "name": "Fasting glucose",
+          "value": 89,
+          "unit": "mg/dL",
+          "range": "70–99",
+          "low": 70,
+          "high": 99,
+          "flag": "normal"
+        },
+        {
+          "name": "Creatinine",
+          "value": 0.9,
+          "unit": "mg/dL",
+          "range": "0.7–1.3",
+          "low": 0.7,
+          "high": 1.3,
+          "flag": "normal"
+        },
+        {
+          "name": "ALT",
+          "value": 25,
+          "unit": "U/L",
+          "range": "7–55",
+          "low": 7,
+          "high": 55,
+          "flag": "normal"
+        },
+        {
+          "name": "Vitamin D, 25-OH",
+          "value": 38,
+          "unit": "ng/mL",
+          "range": "30–100",
+          "low": 30,
+          "high": 100,
+          "flag": "normal"
+        }
+      ],
+      "tags": [
+        "preventive",
+        "lipids"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2023-10-06-colonoscopy",
+      "date": "2023-10-06",
+      "type": "procedure",
+      "title": "Screening colonoscopy",
+      "provider": {
+        "name": "Dr. Aisha Bello",
+        "specialty": "Gastroenterology",
+        "facility": "Bayside Endoscopy Center"
+      },
+      "synopsis": "First routine colonoscopy. One small (4 mm) polyp was found and removed; the biopsy came back as a benign tubular adenoma, the common kind. Because of it, the next colonoscopy is recommended in 7 years instead of 10.",
+      "findings": [
+        {
+          "text": "One 4 mm polyp removed, benign (tubular adenoma)",
+          "sentiment": "watch"
+        },
+        {
+          "text": "No other abnormalities; good prep quality",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Repeat colonoscopy in 7 years (2030)",
+          "sentiment": "neutral"
+        }
+      ],
+      "reportFile": "procedure-report.pdf",
+      "attachments": [
+        {
+          "file": "procedure-report.pdf",
+          "kind": "pdf",
+          "label": "Procedure report"
+        },
+        {
+          "file": "pathology.md",
+          "kind": "document",
+          "label": "Pathology report"
+        }
+      ],
+      "followUp": [
+        {
+          "text": "Repeat colonoscopy",
+          "due": "2030-10-06"
+        }
+      ],
+      "tags": [
+        "preventive",
+        "GI"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2023-09-28-flu-shot",
+      "date": "2023-09-28",
+      "type": "vaccine",
+      "title": "Flu shot (2023–24)",
+      "provider": {
+        "facility": "Walgreens pharmacy"
+      },
+      "synopsis": "Seasonal influenza vaccine.",
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "Walgreens",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2023-03-02-vitamin-d",
+      "date": "2023-03-02",
+      "type": "medication",
+      "title": "Started vitamin D3 2,000 IU daily",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "Over-the-counter vitamin D3 started because the February level was low. Taken with breakfast.",
+      "tags": [
+        "supplement"
+      ],
+      "source": {
+        "portal": "Self-reported",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2023-02-16-annual-labs",
+      "date": "2023-02-16",
+      "type": "lab",
+      "title": "Annual fasting labs",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "LDL continued to improve (119). Vitamin D was low at 22, so a daily supplement was started. Everything else normal.",
+      "findings": [
+        {
+          "text": "LDL 119, continuing to fall",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Vitamin D low (22 ng/mL)",
+          "sentiment": "negative"
+        }
+      ],
+      "values": [
+        {
+          "name": "Total cholesterol",
+          "value": 191,
+          "unit": "mg/dL",
+          "range": "< 200",
+          "high": 200,
+          "flag": "normal"
+        },
+        {
+          "name": "LDL cholesterol",
+          "value": 119,
+          "unit": "mg/dL",
+          "range": "< 100",
+          "high": 100,
+          "flag": "high"
+        },
+        {
+          "name": "HDL cholesterol",
+          "value": 53,
+          "unit": "mg/dL",
+          "range": "> 40",
+          "low": 40,
+          "flag": "normal"
+        },
+        {
+          "name": "Triglycerides",
+          "value": 114,
+          "unit": "mg/dL",
+          "range": "< 150",
+          "high": 150,
+          "flag": "normal"
+        },
+        {
+          "name": "Hemoglobin A1c",
+          "value": 5.3,
+          "unit": "%",
+          "range": "< 5.7",
+          "high": 5.7,
+          "flag": "normal"
+        },
+        {
+          "name": "Fasting glucose",
+          "value": 90,
+          "unit": "mg/dL",
+          "range": "70–99",
+          "low": 70,
+          "high": 99,
+          "flag": "normal"
+        },
+        {
+          "name": "Creatinine",
+          "value": 0.9,
+          "unit": "mg/dL",
+          "range": "0.7–1.3",
+          "low": 0.7,
+          "high": 1.3,
+          "flag": "normal"
+        },
+        {
+          "name": "ALT",
+          "value": 22,
+          "unit": "U/L",
+          "range": "7–55",
+          "low": 7,
+          "high": 55,
+          "flag": "normal"
+        },
+        {
+          "name": "Vitamin D, 25-OH",
+          "value": 22,
+          "unit": "ng/mL",
+          "range": "30–100",
+          "low": 30,
+          "high": 100,
+          "flag": "low"
+        }
+      ],
+      "followUp": [
+        {
+          "text": "Start vitamin D3 2,000 IU daily; re-check in 12 months",
+          "due": "2024-02-16",
+          "done": true
+        }
+      ],
+      "tags": [
+        "preventive",
+        "lipids"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2023-02-14-annual-physical",
+      "date": "2023-02-14",
+      "type": "visit",
+      "title": "Annual physical",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "Weight back down 6 lb. Blood pressure normal. Discussed scheduling a first colonoscopy now that routine screening starts at 45.",
+      "findings": [
+        {
+          "text": "Weight down 6 lb",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Colonoscopy referral placed",
+          "sentiment": "neutral"
+        }
+      ],
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2022-10-04-flu-shot",
+      "date": "2022-10-04",
+      "type": "vaccine",
+      "title": "Flu shot (2022–23)",
+      "provider": {
+        "facility": "Walgreens pharmacy"
+      },
+      "synopsis": "Seasonal influenza vaccine, quadrivalent.",
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "Walgreens",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2022-08-16-lipid-panel",
+      "date": "2022-08-16",
+      "type": "lab",
+      "title": "Lipid panel, 6-month re-check",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "episode": "cholesterol",
+      "synopsis": "Six months of diet and exercise brought LDL down from 142 to 128. Still above target, but moving the right way, so the plan continued without medication.",
+      "findings": [
+        {
+          "text": "LDL down 14 points to 128",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Still above the < 100 target",
+          "sentiment": "watch"
+        }
+      ],
+      "values": [
+        {
+          "name": "Total cholesterol",
+          "value": 198,
+          "unit": "mg/dL",
+          "range": "< 200",
+          "high": 200,
+          "flag": "normal"
+        },
+        {
+          "name": "LDL cholesterol",
+          "value": 128,
+          "unit": "mg/dL",
+          "range": "< 100",
+          "high": 100,
+          "flag": "high"
+        },
+        {
+          "name": "HDL cholesterol",
+          "value": 51,
+          "unit": "mg/dL",
+          "range": "> 40",
+          "low": 40,
+          "flag": "normal"
+        },
+        {
+          "name": "Triglycerides",
+          "value": 121,
+          "unit": "mg/dL",
+          "range": "< 150",
+          "high": 150,
+          "flag": "normal"
+        },
+        {
+          "name": "Hemoglobin A1c",
+          "value": 5.4,
+          "unit": "%",
+          "range": "< 5.7",
+          "high": 5.7,
+          "flag": "normal"
+        }
+      ],
+      "tags": [
+        "lipids"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2022-03-01-cholesterol-plan",
+      "date": "2022-03-01",
+      "type": "visit",
+      "title": "Cholesterol follow-up: lifestyle plan",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "episode": "cholesterol",
+      "synopsis": "Discussed the high LDL. Because the 10-year heart risk is low, agreed to try six months of lifestyle changes before considering a statin: Mediterranean-style eating, fewer refined carbs, 150 minutes a week of moderate cardio, and daily fish oil.",
+      "findings": [
+        {
+          "text": "10-year cardiovascular risk estimated at 3.1% (low)",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Lifestyle plan instead of statin, re-check in 6 months",
+          "sentiment": "neutral"
+        }
+      ],
+      "report": "## Assessment\n\nHyperlipidemia, LDL 142. ASCVD 10-year risk 3.1%. Family history negative for premature CAD.\n\n## Plan\n\n1. Therapeutic lifestyle changes: Mediterranean diet pattern, limit saturated fat < 7% of calories, add 25–30 g/day soluble fiber.\n2. Exercise: 150 min/week moderate aerobic activity plus 2 resistance sessions.\n3. Omega-3 1 g daily.\n4. Repeat fasting lipid panel in 6 months. Consider moderate-intensity statin if LDL remains > 130.",
+      "tags": [
+        "lipids",
+        "lifestyle"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2022-02-10-annual-labs",
+      "date": "2022-02-10",
+      "type": "lab",
+      "title": "Annual fasting labs",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "episode": "cholesterol",
+      "synopsis": "LDL (\"bad\") cholesterol came in at 142, above the 100 target, and total cholesterol crossed 200. Everything else was normal. This is the result that started the cholesterol plan.",
+      "findings": [
+        {
+          "text": "LDL 142 mg/dL, above target",
+          "sentiment": "negative"
+        },
+        {
+          "text": "Total cholesterol 214, high",
+          "sentiment": "negative"
+        },
+        {
+          "text": "Blood sugar (A1c) normal",
+          "sentiment": "positive"
+        }
+      ],
+      "values": [
+        {
+          "name": "Total cholesterol",
+          "value": 214,
+          "unit": "mg/dL",
+          "range": "< 200",
+          "high": 200,
+          "flag": "high"
+        },
+        {
+          "name": "LDL cholesterol",
+          "value": 142,
+          "unit": "mg/dL",
+          "range": "< 100",
+          "high": 100,
+          "flag": "high"
+        },
+        {
+          "name": "HDL cholesterol",
+          "value": 48,
+          "unit": "mg/dL",
+          "range": "> 40",
+          "low": 40,
+          "flag": "normal"
+        },
+        {
+          "name": "Triglycerides",
+          "value": 138,
+          "unit": "mg/dL",
+          "range": "< 150",
+          "high": 150,
+          "flag": "normal"
+        },
+        {
+          "name": "Hemoglobin A1c",
+          "value": 5.4,
+          "unit": "%",
+          "range": "< 5.7",
+          "high": 5.7,
+          "flag": "normal"
+        },
+        {
+          "name": "Fasting glucose",
+          "value": 92,
+          "unit": "mg/dL",
+          "range": "70–99",
+          "low": 70,
+          "high": 99,
+          "flag": "normal"
+        },
+        {
+          "name": "Creatinine",
+          "value": 0.9,
+          "unit": "mg/dL",
+          "range": "0.7–1.3",
+          "low": 0.7,
+          "high": 1.3,
+          "flag": "normal"
+        },
+        {
+          "name": "ALT",
+          "value": 27,
+          "unit": "U/L",
+          "range": "7–55",
+          "low": 7,
+          "high": 55,
+          "flag": "normal"
+        },
+        {
+          "name": "Vitamin D, 25-OH",
+          "value": 29,
+          "unit": "ng/mL",
+          "range": "30–100",
+          "low": 30,
+          "high": 100,
+          "flag": "low"
+        }
+      ],
+      "followUp": [
+        {
+          "text": "Repeat lipid panel in 6 months after diet and exercise changes",
+          "due": "2022-08-10",
+          "done": true
+        }
+      ],
+      "tags": [
+        "preventive",
+        "lipids"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2022-02-08-annual-physical",
+      "date": "2022-02-08",
+      "type": "visit",
+      "title": "Annual physical",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "Routine check-up, moved earlier in the year. Weight up about 8 lb from last year. Labs ordered; cholesterol came back borderline high two days later.",
+      "findings": [
+        {
+          "text": "Weight up 8 lb year over year",
+          "sentiment": "watch"
+        }
+      ],
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2022-01-18-chest-xray",
+      "date": "2022-01-18",
+      "type": "imaging",
+      "title": "Chest X-ray, 2 views",
+      "provider": {
+        "name": "Dr. Lina Haddad",
+        "specialty": "Radiology",
+        "facility": "CityMed Urgent Care"
+      },
+      "synopsis": "Chest X-ray taken for a lingering cough. Lungs were clear, heart size normal, no signs of pneumonia or anything concerning.",
+      "findings": [
+        {
+          "text": "Lungs clear, no pneumonia",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Normal heart size",
+          "sentiment": "positive"
+        }
+      ],
+      "report": "**EXAM:** Chest, PA and lateral.\n\n**INDICATION:** Cough x 3 weeks.\n\n**FINDINGS:** Lungs are clear. No focal consolidation, effusion, or pneumothorax. Cardiomediastinal silhouette is normal. Osseous structures unremarkable.\n\n**IMPRESSION:** No acute cardiopulmonary process.",
+      "attachments": [
+        {
+          "file": "cxr-pa.svg",
+          "kind": "image",
+          "label": "PA view"
+        },
+        {
+          "file": "cxr-lat.svg",
+          "kind": "image",
+          "label": "Lateral view"
+        }
+      ],
+      "tags": [
+        "respiratory"
+      ],
+      "source": {
+        "portal": "CityMed patient portal",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2022-01-18-urgent-care-cough",
+      "date": "2022-01-18",
+      "type": "visit",
+      "title": "Urgent care: persistent cough",
+      "provider": {
+        "name": "Dr. Tom Ferreira",
+        "specialty": "Urgent care",
+        "facility": "CityMed Urgent Care"
+      },
+      "synopsis": "Three weeks of a dry cough after a cold. Lungs sounded clear but a chest X-ray was ordered to be safe. Diagnosed as post-viral bronchitis; treated with an inhaler for two weeks.",
+      "findings": [
+        {
+          "text": "Post-viral bronchitis, no pneumonia",
+          "sentiment": "neutral"
+        },
+        {
+          "text": "Albuterol inhaler as needed for 2 weeks",
+          "sentiment": "neutral"
+        }
+      ],
+      "tags": [
+        "respiratory"
+      ],
+      "source": {
+        "portal": "CityMed patient portal",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2021-05-14-annual-labs",
+      "date": "2021-05-14",
+      "type": "lab",
+      "title": "Annual fasting labs",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "Everything in range. Cholesterol was fine this year (LDL 96). Vitamin D slightly on the low side of normal.",
+      "findings": [
+        {
+          "text": "All results within normal range",
+          "sentiment": "positive"
+        }
+      ],
+      "values": [
+        {
+          "name": "Total cholesterol",
+          "value": 184,
+          "unit": "mg/dL",
+          "range": "< 200",
+          "high": 200,
+          "flag": "normal"
+        },
+        {
+          "name": "LDL cholesterol",
+          "value": 96,
+          "unit": "mg/dL",
+          "range": "< 100",
+          "high": 100,
+          "flag": "normal"
+        },
+        {
+          "name": "HDL cholesterol",
+          "value": 52,
+          "unit": "mg/dL",
+          "range": "> 40",
+          "low": 40,
+          "flag": "normal"
+        },
+        {
+          "name": "Triglycerides",
+          "value": 110,
+          "unit": "mg/dL",
+          "range": "< 150",
+          "high": 150,
+          "flag": "normal"
+        },
+        {
+          "name": "Hemoglobin A1c",
+          "value": 5.3,
+          "unit": "%",
+          "range": "< 5.7",
+          "high": 5.7,
+          "flag": "normal"
+        },
+        {
+          "name": "Fasting glucose",
+          "value": 88,
+          "unit": "mg/dL",
+          "range": "70–99",
+          "low": 70,
+          "high": 99,
+          "flag": "normal"
+        },
+        {
+          "name": "Creatinine",
+          "value": 0.9,
+          "unit": "mg/dL",
+          "range": "0.7–1.3",
+          "low": 0.7,
+          "high": 1.3,
+          "flag": "normal"
+        },
+        {
+          "name": "ALT",
+          "value": 24,
+          "unit": "U/L",
+          "range": "7–55",
+          "low": 7,
+          "high": 55,
+          "flag": "normal"
+        },
+        {
+          "name": "Vitamin D, 25-OH",
+          "value": 31,
+          "unit": "ng/mL",
+          "range": "30–100",
+          "low": 30,
+          "high": 100,
+          "flag": "normal"
+        }
+      ],
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2021-05-12-annual-physical",
+      "date": "2021-05-12",
+      "type": "visit",
+      "title": "Annual physical",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "Routine yearly check-up. Blood pressure, weight, and exam were all normal. Tdap booster given since the last one was more than ten years ago. No concerns raised.",
+      "findings": [
+        {
+          "text": "Blood pressure 118/76, normal",
+          "sentiment": "positive"
+        },
+        {
+          "text": "Tdap booster administered",
+          "sentiment": "neutral"
+        }
+      ],
+      "report": "## Assessment\n\nHealthy 39-year-old male, no acute complaints. Vitals within normal limits (BP 118/76, HR 64, BMI 25.1).\n\n## Plan\n\n- Tdap booster given today (left deltoid, lot DEMO-4411).\n- Fasting labs ordered.\n- Return in 12 months.",
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    },
+    {
+      "id": "2021-05-12-tdap",
+      "date": "2021-05-12",
+      "type": "vaccine",
+      "title": "Tdap booster",
+      "provider": {
+        "name": "Dr. Priya Raman",
+        "specialty": "Primary care",
+        "facility": "Bayside Family Medicine"
+      },
+      "synopsis": "Tetanus, diphtheria, and pertussis booster. Good for ten years.",
+      "findings": [
+        {
+          "text": "Next booster due 2031",
+          "sentiment": "neutral"
+        }
+      ],
+      "tags": [
+        "preventive"
+      ],
+      "source": {
+        "portal": "MyChart — Bayside",
+        "importedOn": "2026-10-12"
+      }
+    }
+  ]
+}

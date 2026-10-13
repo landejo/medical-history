@@ -1,0 +1,120 @@
+{
+  "id": "2022-02-10-annual-labs",
+  "date": "2022-02-10",
+  "type": "lab",
+  "title": "Annual fasting labs",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "episode": "cholesterol",
+  "synopsis": "LDL (\"bad\") cholesterol came in at 142, above the 100 target, and total cholesterol crossed 200. Everything else was normal. This is the result that started the cholesterol plan.",
+  "findings": [
+    {
+      "text": "LDL 142 mg/dL, above target",
+      "sentiment": "negative"
+    },
+    {
+      "text": "Total cholesterol 214, high",
+      "sentiment": "negative"
+    },
+    {
+      "text": "Blood sugar (A1c) normal",
+      "sentiment": "positive"
+    }
+  ],
+  "values": [
+    {
+      "name": "Total cholesterol",
+      "value": 214,
+      "unit": "mg/dL",
+      "range": "< 200",
+      "high": 200,
+      "flag": "high"
+    },
+    {
+      "name": "LDL cholesterol",
+      "value": 142,
+      "unit": "mg/dL",
+      "range": "< 100",
+      "high": 100,
+      "flag": "high"
+    },
+    {
+      "name": "HDL cholesterol",
+      "value": 48,
+      "unit": "mg/dL",
+      "range": "> 40",
+      "low": 40,
+      "flag": "normal"
+    },
+    {
+      "name": "Triglycerides",
+      "value": 138,
+      "unit": "mg/dL",
+      "range": "< 150",
+      "high": 150,
+      "flag": "normal"
+    },
+    {
+      "name": "Hemoglobin A1c",
+      "value": 5.4,
+      "unit": "%",
+      "range": "< 5.7",
+      "high": 5.7,
+      "flag": "normal"
+    },
+    {
+      "name": "Fasting glucose",
+      "value": 92,
+      "unit": "mg/dL",
+      "range": "70–99",
+      "low": 70,
+      "high": 99,
+      "flag": "normal"
+    },
+    {
+      "name": "Creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "range": "0.7–1.3",
+      "low": 0.7,
+      "high": 1.3,
+      "flag": "normal"
+    },
+    {
+      "name": "ALT",
+      "value": 27,
+      "unit": "U/L",
+      "range": "7–55",
+      "low": 7,
+      "high": 55,
+      "flag": "normal"
+    },
+    {
+      "name": "Vitamin D, 25-OH",
+      "value": 29,
+      "unit": "ng/mL",
+      "range": "30–100",
+      "low": 30,
+      "high": 100,
+      "flag": "low"
+    }
+  ],
+  "followUp": [
+    {
+      "text": "Repeat lipid panel in 6 months after diet and exercise changes",
+      "due": "2022-08-10",
+      "done": true
+    }
+  ],
+  "tags": [
+    "preventive",
+    "lipids"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

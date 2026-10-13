@@ -1,0 +1,25 @@
+{
+  "id": "2026-02-13-annual-physical",
+  "date": "2026-02-13",
+  "type": "visit",
+  "title": "Annual physical",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "synopsis": "Weight down 12 lb from the 2025 peak. Blood pressure 116/74. Reviewed the cholesterol win and the sleep plan. Shingles vaccine recommended at 50 (2031). No changes to medications.",
+  "findings": [
+    {
+      "text": "Blood pressure 116/74, weight down 12 lb",
+      "sentiment": "positive"
+    }
+  ],
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

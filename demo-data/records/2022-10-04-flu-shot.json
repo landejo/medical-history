@@ -1,0 +1,17 @@
+{
+  "id": "2022-10-04-flu-shot",
+  "date": "2022-10-04",
+  "type": "vaccine",
+  "title": "Flu shot (2022–23)",
+  "provider": {
+    "facility": "Walgreens pharmacy"
+  },
+  "synopsis": "Seasonal influenza vaccine, quadrivalent.",
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "Walgreens",
+    "importedOn": "2026-10-12"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "2025-03-18-sleep-study",
+  "date": "2025-03-18",
+  "type": "procedure",
+  "title": "Home sleep apnea test",
+  "provider": {
+    "name": "Dr. Elena Castillo",
+    "specialty": "Sleep medicine",
+    "facility": "Bayside Sleep Center"
+  },
+  "episode": "sleep-2025",
+  "synopsis": "Overnight test at home with a nasal sensor and finger oxygen monitor. Showed mild sleep apnea: breathing paused or shallowed about 9 times per hour, mostly when sleeping on the back. Oxygen dipped to 88% at the lowest point.",
+  "findings": [
+    {
+      "text": "Mild obstructive sleep apnea (AHI 9.2/hr)",
+      "sentiment": "negative"
+    },
+    {
+      "text": "Much worse on back (AHI 18) than on side (AHI 4)",
+      "sentiment": "watch"
+    },
+    {
+      "text": "Lowest oxygen 88%",
+      "sentiment": "watch"
+    }
+  ],
+  "values": [
+    {
+      "name": "AHI (events/hr)",
+      "value": 9.2,
+      "range": "< 5",
+      "high": 5,
+      "flag": "high"
+    },
+    {
+      "name": "AHI supine",
+      "value": 18.1,
+      "range": "< 5",
+      "high": 5,
+      "flag": "high"
+    },
+    {
+      "name": "AHI non-supine",
+      "value": 4,
+      "range": "< 5",
+      "high": 5,
+      "flag": "normal"
+    },
+    {
+      "name": "Lowest SpO2",
+      "value": 88,
+      "unit": "%",
+      "range": "> 90",
+      "low": 90,
+      "flag": "low"
+    }
+  ],
+  "reportFile": "sleep-study-report.md",
+  "attachments": [
+    {
+      "file": "sleep-study-report.md",
+      "kind": "document",
+      "label": "Sleep study report"
+    }
+  ],
+  "tags": [
+    "sleep"
+  ],
+  "source": {
+    "portal": "Bayside Sleep Center",
+    "importedOn": "2026-10-12"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "2024-03-21-ortho-consult",
+  "date": "2024-03-21",
+  "type": "visit",
+  "title": "Orthopedic consult",
+  "provider": {
+    "name": "Dr. Marcus Oyelaran",
+    "specialty": "Orthopedic surgery",
+    "facility": "Pacific Orthopedic Institute"
+  },
+  "episode": "acl-right-2024",
+  "synopsis": "Reviewed the MRI. Because of an active lifestyle and the meniscus tear, surgery was recommended over rehab alone. Chose a patellar tendon autograft. Three weeks of \"prehab\" first to reduce swelling and restore range of motion.",
+  "findings": [
+    {
+      "text": "ACL reconstruction recommended",
+      "sentiment": "neutral"
+    },
+    {
+      "text": "Prehab for 3–4 weeks before surgery",
+      "sentiment": "neutral"
+    }
+  ],
+  "report": "## Assessment\n\nRight knee ACL rupture with medial meniscus tear in a 42-year-old recreational athlete. Full extension lacking 5°, flexion 110°, moderate effusion.\n\n## Plan\n\n- Prehab PT 3x/week: effusion control, quad activation, ROM to 0–130.\n- ACL reconstruction with bone-patellar tendon-bone autograft and meniscal repair, target mid-April.\n- Reviewed risks: infection, stiffness, graft failure (~5%), anterior knee pain.",
+  "tags": [
+    "knee"
+  ],
+  "source": {
+    "portal": "Pacific Ortho portal",
+    "importedOn": "2026-10-12"
+  }
+}

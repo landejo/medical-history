@@ -1,0 +1,30 @@
+{
+  "id": "2025-02-19-pcp-fatigue",
+  "date": "2025-02-19",
+  "type": "visit",
+  "title": "Fatigue and snoring",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "episode": "sleep-2025",
+  "synopsis": "Reported waking unrefreshed and loud snoring noticed by partner. Thyroid was normal on recent labs. A home sleep test was ordered to check for sleep apnea.",
+  "findings": [
+    {
+      "text": "Home sleep study ordered",
+      "sentiment": "neutral"
+    },
+    {
+      "text": "STOP-BANG score 4 (intermediate risk)",
+      "sentiment": "watch"
+    }
+  ],
+  "tags": [
+    "sleep"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

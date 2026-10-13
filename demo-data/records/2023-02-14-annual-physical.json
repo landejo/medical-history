@@ -1,0 +1,29 @@
+{
+  "id": "2023-02-14-annual-physical",
+  "date": "2023-02-14",
+  "type": "visit",
+  "title": "Annual physical",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "synopsis": "Weight back down 6 lb. Blood pressure normal. Discussed scheduling a first colonoscopy now that routine screening starts at 45.",
+  "findings": [
+    {
+      "text": "Weight down 6 lb",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Colonoscopy referral placed",
+      "sentiment": "neutral"
+    }
+  ],
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

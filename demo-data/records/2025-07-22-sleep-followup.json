@@ -1,0 +1,26 @@
+{
+  "id": "2025-07-22-sleep-followup",
+  "date": "2025-07-22",
+  "type": "visit",
+  "title": "Sleep follow-up, 3 months",
+  "provider": {
+    "name": "Dr. Elena Castillo",
+    "specialty": "Sleep medicine",
+    "facility": "Bayside Sleep Center"
+  },
+  "episode": "sleep-2025",
+  "synopsis": "Down 7 lb and using the side-sleeping device nightly. Snoring much reduced per partner and daytime energy better. Plan unchanged; continue and recheck.",
+  "findings": [
+    {
+      "text": "Symptoms improved with positional therapy and 7 lb weight loss",
+      "sentiment": "positive"
+    }
+  ],
+  "tags": [
+    "sleep"
+  ],
+  "source": {
+    "portal": "Bayside Sleep Center",
+    "importedOn": "2026-10-12"
+  }
+}

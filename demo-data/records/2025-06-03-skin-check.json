@@ -1,0 +1,37 @@
+{
+  "id": "2025-06-03-skin-check",
+  "date": "2025-06-03",
+  "type": "visit",
+  "title": "Full-body skin check",
+  "provider": {
+    "name": "Dr. Hannah Zhou",
+    "specialty": "Dermatology",
+    "facility": "Marina Dermatology"
+  },
+  "synopsis": "Annual skin exam. One mole on the upper back was photographed to watch over time; it looked benign. No biopsies needed.",
+  "findings": [
+    {
+      "text": "No suspicious lesions",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Mole on upper back photographed for monitoring",
+      "sentiment": "watch"
+    }
+  ],
+  "attachments": [
+    {
+      "file": "mole-upper-back.svg",
+      "kind": "image",
+      "label": "Dermoscopy photo, upper back"
+    }
+  ],
+  "tags": [
+    "preventive",
+    "skin"
+  ],
+  "source": {
+    "portal": "Marina Dermatology",
+    "importedOn": "2026-10-12"
+  }
+}

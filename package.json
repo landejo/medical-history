@@ -1,0 +1,33 @@
+{
+  "name": "medical-history",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "vitest",
+    "index": "node scripts/build-index.mjs",
+    "index:demo": "node scripts/build-index.mjs demo-data",
+    "demo": "node scripts/make-demo-data.mjs && node scripts/build-index.mjs demo-data"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "lucide-react": "^1.56.0",
+    "marked": "^18.1.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.4"
+  }
+}

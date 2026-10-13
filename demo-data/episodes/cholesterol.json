@@ -1,0 +1,13 @@
+{
+  "id": "cholesterol",
+  "title": "Borderline high cholesterol",
+  "started": "2022-02-10",
+  "status": "monitoring",
+  "kind": "condition",
+  "summary": "LDL first flagged at 142 mg/dL in Feb 2022. Chose a lifestyle-first plan (Mediterranean-style diet, 150 min/week of zone-2 cardio, fish oil) instead of a statin. LDL has fallen steadily each year and reached the under-100 target in 2026.",
+  "tags": [
+    "heart",
+    "lipids",
+    "lifestyle"
+  ]
+}

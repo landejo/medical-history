@@ -1,0 +1,17 @@
+{
+  "id": "2024-10-09-flu-covid",
+  "date": "2024-10-09",
+  "type": "vaccine",
+  "title": "Flu shot + COVID-19 booster (2024–25)",
+  "provider": {
+    "facility": "Walgreens pharmacy"
+  },
+  "synopsis": "Seasonal flu vaccine and updated COVID-19 booster, one in each arm.",
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "Walgreens",
+    "importedOn": "2026-10-12"
+  }
+}

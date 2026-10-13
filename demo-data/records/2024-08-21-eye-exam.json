@@ -1,0 +1,26 @@
+{
+  "id": "2024-08-21-eye-exam",
+  "date": "2024-08-21",
+  "type": "visit",
+  "title": "Routine eye exam",
+  "provider": {
+    "name": "Dr. Kevin Park",
+    "specialty": "Optometry",
+    "facility": "Marina Vision"
+  },
+  "synopsis": "Routine eye exam. Mild nearsightedness unchanged; glasses prescription the same. Retina and eye pressure normal.",
+  "findings": [
+    {
+      "text": "Eye pressure and retina normal",
+      "sentiment": "positive"
+    }
+  ],
+  "tags": [
+    "preventive",
+    "eyes"
+  ],
+  "source": {
+    "portal": "Marina Vision",
+    "importedOn": "2026-10-12"
+  }
+}

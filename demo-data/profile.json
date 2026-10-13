@@ -1,0 +1,106 @@
+{
+  "name": "Demo Patient",
+  "dob": "1981-06-14",
+  "bloodType": "O+",
+  "allergies": [
+    {
+      "name": "Penicillin",
+      "reaction": "Hives",
+      "severity": "moderate"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Vitamin D3",
+      "dose": "2,000 IU",
+      "frequency": "daily",
+      "since": "2023-03-02",
+      "reason": "Low vitamin D"
+    },
+    {
+      "name": "Omega-3 fish oil",
+      "dose": "1 g",
+      "frequency": "daily",
+      "since": "2022-03-01",
+      "reason": "Cholesterol (lifestyle plan)"
+    }
+  ],
+  "conditions": [
+    {
+      "name": "Borderline high cholesterol",
+      "since": "2022-02-10",
+      "status": "improving with lifestyle changes"
+    },
+    {
+      "name": "Mild obstructive sleep apnea",
+      "since": "2025-03-18",
+      "status": "managed with positional therapy and weight loss"
+    },
+    {
+      "name": "Right ACL reconstruction (2024)",
+      "since": "2024-04-18",
+      "status": "recovered"
+    }
+  ],
+  "careTeam": [
+    {
+      "name": "Dr. Priya Raman",
+      "role": "Primary care",
+      "facility": "Bayside Family Medicine",
+      "phone": "(415) 555-0142"
+    },
+    {
+      "name": "Dr. Marcus Oyelaran",
+      "role": "Orthopedic surgeon",
+      "facility": "Pacific Orthopedic Institute"
+    },
+    {
+      "name": "Dr. Elena Castillo",
+      "role": "Sleep medicine",
+      "facility": "Bayside Sleep Center"
+    },
+    {
+      "name": "Dr. Hannah Zhou",
+      "role": "Dermatology",
+      "facility": "Marina Dermatology"
+    }
+  ],
+  "screenings": [
+    {
+      "name": "Colonoscopy",
+      "last": "2023-10-06",
+      "due": "2030-10-06",
+      "note": "One small benign polyp removed; 7-year interval"
+    },
+    {
+      "name": "Lipid panel",
+      "last": "2026-02-11",
+      "due": "2027-02-11"
+    },
+    {
+      "name": "Skin check",
+      "last": "2025-06-03",
+      "due": "2026-06-03"
+    },
+    {
+      "name": "Eye exam",
+      "last": "2024-08-21",
+      "due": "2026-08-21"
+    },
+    {
+      "name": "Tetanus (Tdap) booster",
+      "last": "2021-05-12",
+      "due": "2031-05-12"
+    },
+    {
+      "name": "Flu shot",
+      "last": "2025-10-02",
+      "due": "2026-10-01"
+    }
+  ],
+  "emergency": {
+    "contact": "Sam Patient (spouse)",
+    "phone": "(415) 555-0199",
+    "notes": "Penicillin allergy. No blood thinners."
+  }
+}

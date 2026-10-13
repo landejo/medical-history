@@ -1,0 +1,29 @@
+{
+  "id": "2022-01-18-urgent-care-cough",
+  "date": "2022-01-18",
+  "type": "visit",
+  "title": "Urgent care: persistent cough",
+  "provider": {
+    "name": "Dr. Tom Ferreira",
+    "specialty": "Urgent care",
+    "facility": "CityMed Urgent Care"
+  },
+  "synopsis": "Three weeks of a dry cough after a cold. Lungs sounded clear but a chest X-ray was ordered to be safe. Diagnosed as post-viral bronchitis; treated with an inhaler for two weeks.",
+  "findings": [
+    {
+      "text": "Post-viral bronchitis, no pneumonia",
+      "sentiment": "neutral"
+    },
+    {
+      "text": "Albuterol inhaler as needed for 2 weeks",
+      "sentiment": "neutral"
+    }
+  ],
+  "tags": [
+    "respiratory"
+  ],
+  "source": {
+    "portal": "CityMed patient portal",
+    "importedOn": "2026-10-12"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "2024-03-14-knee-mri",
+  "date": "2024-03-14",
+  "type": "imaging",
+  "title": "MRI, right knee",
+  "episode": "acl-right-2024",
+  "provider": {
+    "name": "Dr. Lina Haddad",
+    "specialty": "Radiology",
+    "facility": "Pacific Imaging"
+  },
+  "synopsis": "MRI confirmed a complete tear of the ACL and a small tear of the inner (medial) meniscus. The other ligaments and cartilage looked healthy, which makes surgical repair more straightforward.",
+  "findings": [
+    {
+      "text": "Complete ACL tear",
+      "sentiment": "negative"
+    },
+    {
+      "text": "Small medial meniscus tear (posterior horn)",
+      "sentiment": "negative"
+    },
+    {
+      "text": "PCL, MCL, LCL and cartilage intact",
+      "sentiment": "positive"
+    }
+  ],
+  "report": "**EXAM:** MRI right knee without contrast.\n\n**FINDINGS:**\n\n- *ACL:* Complete disruption of the mid-substance fibers with abnormal horizontal orientation. Associated bone marrow edema in the lateral femoral condyle and posterolateral tibial plateau (classic pivot-shift pattern).\n- *Menisci:* Vertical longitudinal tear of the posterior horn of the medial meniscus, 8 mm. Lateral meniscus intact.\n- *PCL, MCL, LCL:* Intact.\n- *Cartilage:* Preserved. No full-thickness defects.\n- *Joint:* Moderate effusion.\n\n**IMPRESSION:**\n\n1. Complete ACL tear with typical bone contusion pattern.\n2. Posterior horn medial meniscus tear.\n3. Moderate joint effusion.",
+  "attachments": [
+    {
+      "file": "mri-sag-t2.svg",
+      "kind": "image",
+      "label": "Sagittal T2"
+    },
+    {
+      "file": "mri-cor-pd.svg",
+      "kind": "image",
+      "label": "Coronal PD"
+    },
+    {
+      "file": "mri-ax.svg",
+      "kind": "image",
+      "label": "Axial"
+    }
+  ],
+  "tags": [
+    "knee"
+  ],
+  "source": {
+    "portal": "Pacific Imaging portal",
+    "importedOn": "2026-10-12"
+  }
+}

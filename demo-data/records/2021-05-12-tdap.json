@@ -1,0 +1,25 @@
+{
+  "id": "2021-05-12-tdap",
+  "date": "2021-05-12",
+  "type": "vaccine",
+  "title": "Tdap booster",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "synopsis": "Tetanus, diphtheria, and pertussis booster. Good for ten years.",
+  "findings": [
+    {
+      "text": "Next booster due 2031",
+      "sentiment": "neutral"
+    }
+  ],
+  "tags": [
+    "preventive"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

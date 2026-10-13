@@ -1,0 +1,30 @@
+{
+  "id": "2024-11-15-return-to-sport",
+  "date": "2024-11-15",
+  "type": "visit",
+  "title": "Return-to-sport clearance",
+  "provider": {
+    "name": "Dr. Marcus Oyelaran",
+    "specialty": "Orthopedic surgery",
+    "facility": "Pacific Orthopedic Institute"
+  },
+  "episode": "acl-right-2024",
+  "synopsis": "Passed the hop and strength tests (right leg within 90% of left). Cleared for full sport including soccer. Advised to keep doing the prevention exercises long term since the re-tear risk is highest in the first two years.",
+  "findings": [
+    {
+      "text": "Cleared for full sport",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Continue ACL prevention program; re-tear risk highest for 2 years",
+      "sentiment": "watch"
+    }
+  ],
+  "tags": [
+    "knee"
+  ],
+  "source": {
+    "portal": "Pacific Ortho portal",
+    "importedOn": "2026-10-12"
+  }
+}

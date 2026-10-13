@@ -1,0 +1,108 @@
+{
+  "id": "2024-02-20-annual-labs",
+  "date": "2024-02-20",
+  "type": "lab",
+  "title": "Annual fasting labs",
+  "provider": {
+    "name": "Dr. Priya Raman",
+    "specialty": "Primary care",
+    "facility": "Bayside Family Medicine"
+  },
+  "synopsis": "LDL 112, still trending down. Vitamin D back to normal (38) on the supplement. Blood sugar, kidney and liver all normal.",
+  "findings": [
+    {
+      "text": "LDL 112, close to target",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Vitamin D normalized (38 ng/mL)",
+      "sentiment": "positive"
+    }
+  ],
+  "values": [
+    {
+      "name": "Total cholesterol",
+      "value": 186,
+      "unit": "mg/dL",
+      "range": "< 200",
+      "high": 200,
+      "flag": "normal"
+    },
+    {
+      "name": "LDL cholesterol",
+      "value": 112,
+      "unit": "mg/dL",
+      "range": "< 100",
+      "high": 100,
+      "flag": "high"
+    },
+    {
+      "name": "HDL cholesterol",
+      "value": 55,
+      "unit": "mg/dL",
+      "range": "> 40",
+      "low": 40,
+      "flag": "normal"
+    },
+    {
+      "name": "Triglycerides",
+      "value": 105,
+      "unit": "mg/dL",
+      "range": "< 150",
+      "high": 150,
+      "flag": "normal"
+    },
+    {
+      "name": "Hemoglobin A1c",
+      "value": 5.4,
+      "unit": "%",
+      "range": "< 5.7",
+      "high": 5.7,
+      "flag": "normal"
+    },
+    {
+      "name": "Fasting glucose",
+      "value": 89,
+      "unit": "mg/dL",
+      "range": "70–99",
+      "low": 70,
+      "high": 99,
+      "flag": "normal"
+    },
+    {
+      "name": "Creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "range": "0.7–1.3",
+      "low": 0.7,
+      "high": 1.3,
+      "flag": "normal"
+    },
+    {
+      "name": "ALT",
+      "value": 25,
+      "unit": "U/L",
+      "range": "7–55",
+      "low": 7,
+      "high": 55,
+      "flag": "normal"
+    },
+    {
+      "name": "Vitamin D, 25-OH",
+      "value": 38,
+      "unit": "ng/mL",
+      "range": "30–100",
+      "low": 30,
+      "high": 100,
+      "flag": "normal"
+    }
+  ],
+  "tags": [
+    "preventive",
+    "lipids"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}

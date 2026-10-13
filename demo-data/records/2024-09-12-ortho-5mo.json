@@ -1,0 +1,26 @@
+{
+  "id": "2024-09-12-ortho-5mo",
+  "date": "2024-09-12",
+  "type": "visit",
+  "title": "Ortho follow-up, 5 months",
+  "provider": {
+    "name": "Dr. Marcus Oyelaran",
+    "specialty": "Orthopedic surgery",
+    "facility": "Pacific Orthopedic Institute"
+  },
+  "episode": "acl-right-2024",
+  "synopsis": "Knee stable on exam, strength at 85% of the other side. Cleared to begin straight-line running and a return-to-sport program with PT.",
+  "findings": [
+    {
+      "text": "Graft stable, cleared for running",
+      "sentiment": "positive"
+    }
+  ],
+  "tags": [
+    "knee"
+  ],
+  "source": {
+    "portal": "Pacific Ortho portal",
+    "importedOn": "2026-10-12"
+  }
+}

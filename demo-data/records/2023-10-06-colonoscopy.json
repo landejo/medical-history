@@ -1,0 +1,53 @@
+{
+  "id": "2023-10-06-colonoscopy",
+  "date": "2023-10-06",
+  "type": "procedure",
+  "title": "Screening colonoscopy",
+  "provider": {
+    "name": "Dr. Aisha Bello",
+    "specialty": "Gastroenterology",
+    "facility": "Bayside Endoscopy Center"
+  },
+  "synopsis": "First routine colonoscopy. One small (4 mm) polyp was found and removed; the biopsy came back as a benign tubular adenoma, the common kind. Because of it, the next colonoscopy is recommended in 7 years instead of 10.",
+  "findings": [
+    {
+      "text": "One 4 mm polyp removed, benign (tubular adenoma)",
+      "sentiment": "watch"
+    },
+    {
+      "text": "No other abnormalities; good prep quality",
+      "sentiment": "positive"
+    },
+    {
+      "text": "Repeat colonoscopy in 7 years (2030)",
+      "sentiment": "neutral"
+    }
+  ],
+  "reportFile": "procedure-report.pdf",
+  "attachments": [
+    {
+      "file": "procedure-report.pdf",
+      "kind": "pdf",
+      "label": "Procedure report"
+    },
+    {
+      "file": "pathology.md",
+      "kind": "document",
+      "label": "Pathology report"
+    }
+  ],
+  "followUp": [
+    {
+      "text": "Repeat colonoscopy",
+      "due": "2030-10-06"
+    }
+  ],
+  "tags": [
+    "preventive",
+    "GI"
+  ],
+  "source": {
+    "portal": "MyChart — Bayside",
+    "importedOn": "2026-10-12"
+  }
+}
