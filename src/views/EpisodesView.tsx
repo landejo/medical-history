@@ -78,7 +78,7 @@ export function EpisodeView({ episodeId, activeId }: { episodeId: string; active
       <div className="ep-cols">
         <div>
           <h3 style={{ marginBottom: 12 }}>How it unfolded</h3>
-          <Timeline items={items} activeId={activeId} hrefForRecord={(id) => hrefFor({ name: 'episodes', episodeId: episode.id, recordId: id })} />
+          <Timeline items={items} activeId={activeId} hrefForRecord={(id) => hrefFor({ name: 'episodes', episodeId: episode.id, recordId: id })} emptyText="No visits, tests or treatment yet. Related records are listed alongside." />
           <a className="btn" href={hrefFor({ name: 'add', episodeId: episode.id })} style={{ marginTop: 8 }}><Plus /> Add a record to this episode</a>
         </div>
         <div>

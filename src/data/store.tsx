@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import type { DataIndex, MedRecord } from '../types'
-import { applyTheme, loadSettings, saveSettings, type Settings } from '../lib/settings'
+import { applyDisplay, applyTheme, loadSettings, saveSettings, type Settings } from '../lib/settings'
 import { makeSource, type DataSource } from './source'
 
 type Status = 'idle' | 'loading' | 'ready' | 'error' | 'unconfigured'
@@ -32,6 +32,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const source = useMemo(() => makeSource(settings), [settings.source, settings.github.owner, settings.github.repo, settings.github.branch, settings.github.token]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => applyTheme(settings.theme), [settings.theme])
+  useEffect(() => applyDisplay(settings.textScale, settings.width), [settings.textScale, settings.width])
 
   const updateSettings = useCallback((patch: Partial<Settings>) => {
     setSettings((prev) => {

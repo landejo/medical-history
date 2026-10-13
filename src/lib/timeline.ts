@@ -7,9 +7,13 @@ export interface Filters {
   query: string
   /** Body area, e.g. "Left knee". Empty string means all. */
   site: string
+  surgeryOnly: boolean
 }
 
-export const emptyFilters = (): Filters => ({ types: new Set(), notableOnly: false, query: '', site: '' })
+export const emptyFilters = (): Filters => ({ types: new Set(), notableOnly: false, query: '', site: '', surgeryOnly: false })
+
+/** Operations, as opposed to other procedures like injections. Marked with the "surgery" tag. */
+export const isSurgery = (r: MedRecord) => (r.tags ?? []).includes('surgery')
 
 /** A record's body areas: its own, else its episode's. */
 export function recordSites(r: MedRecord, episodesById: Map<string, Episode>): string[] {
@@ -63,6 +67,7 @@ export function filterRecords(records: MedRecord[], f: Filters, episodes: Episod
     (r) =>
       (f.types.size === 0 || f.types.has(r.type)) &&
       (!f.notableOnly || isNotable(r)) &&
+      (!f.surgeryOnly || isSurgery(r)) &&
       (!f.site || recordSites(r, byId).includes(f.site)) &&
       matchesQuery(r, f.query),
   )

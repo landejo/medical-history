@@ -1,10 +1,13 @@
 import { useStore } from '../data/store'
 import { daysBetween, formatDate, todayIso } from '../lib/format'
+import { hrefFor } from '../lib/router'
+import { isSurgery } from '../lib/timeline'
 
 export function ProfileView() {
   const { index } = useStore()
   if (!index) return null
   const p = index.profile
+  const surgeries = index.records.filter(isSurgery).sort((a, b) => (a.date < b.date ? -1 : 1))
   const today = todayIso()
   const dueClass = (due?: string) => {
     if (!due) return ''
@@ -23,6 +26,24 @@ export function ProfileView() {
         </div>
       </div>
       <div className="cards">
+        <div className="card full">
+          <div className="card-head">
+            <h3>Surgical history</h3>
+            <span className="stat"><b>{surgeries.length}</b> {surgeries.length === 1 ? 'surgery' : 'surgeries'} on record</span>
+          </div>
+          {surgeries.length ? (
+            <ol className="list surgeries">
+              {surgeries.map((r, i) => (
+                <li key={r.id}>
+                  <span className="n mono">{i + 1}</span>
+                  <a href={hrefFor({ name: 'timeline', recordId: r.id })}>{r.title}</a>
+                  <span className="r">{formatDate(r.date, r.datePrecision)}{r.provider?.name ? ` · ${r.provider.name}` : ''}</span>
+                </li>
+              ))}
+            </ol>
+          ) : <p className="muted small">No surgeries on record.</p>}
+          {p.surgeryNote && <p className="muted small" style={{ marginTop: 10 }}>{p.surgeryNote}</p>}
+        </div>
         <div className="card">
           <h3>Preventive screenings</h3>
           {p.screenings?.length ? (

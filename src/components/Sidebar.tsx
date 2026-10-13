@@ -1,6 +1,7 @@
 import { Clock, Layers, MessageCircle, Plus, Settings, Share2, TrendingUp, User } from 'lucide-react'
 import { useStore } from '../data/store'
 import { hrefFor, type Route } from '../lib/router'
+import { TEXT_SCALES, WIDTHS, stepTextScale } from '../lib/settings'
 import { useUi } from '../ui'
 
 const NAV: { route: Route; label: string; icon: typeof Clock }[] = [
@@ -12,7 +13,8 @@ const NAV: { route: Route; label: string; icon: typeof Clock }[] = [
 ]
 
 export function Sidebar({ route }: { route: Route }) {
-  const { index, source, status, settings } = useStore()
+  const { index, source, status, settings, updateSettings } = useStore()
+  const scaleLabel = TEXT_SCALES.find((s) => Math.abs(s.value - settings.textScale) < 1e-6)?.label ?? 'Custom'
   const { openChat } = useUi()
   const counts: Record<string, number | undefined> = {
     timeline: index?.records.length,
@@ -35,6 +37,22 @@ export function Sidebar({ route }: { route: Route }) {
       </div>
       <button className="ask-btn" onClick={() => openChat()}><MessageCircle /> Ask Claude</button>
       <div className="spacer" />
+      <div className="display-ctl" aria-label="Display">
+        <div className="row-ctl">
+          <span className="lbl">Text</span>
+          <button className="mini" onClick={() => updateSettings({ textScale: stepTextScale(settings.textScale, -1) })} disabled={settings.textScale <= TEXT_SCALES[0].value} aria-label="Smaller text">A−</button>
+          <span className="val">{scaleLabel}</span>
+          <button className="mini" onClick={() => updateSettings({ textScale: stepTextScale(settings.textScale, 1) })} disabled={settings.textScale >= TEXT_SCALES[TEXT_SCALES.length - 1].value} aria-label="Larger text">A+</button>
+        </div>
+        <div className="row-ctl">
+          <span className="lbl">Width</span>
+          <div className="seg mini-seg" role="group" aria-label="Page width">
+            {WIDTHS.map((w) => (
+              <button key={w.value} className={settings.width === w.value ? 'on' : ''} onClick={() => updateSettings({ width: w.value })}>{w.label}</button>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="nav">
         <a href={hrefFor({ name: 'settings' })} className={route.name === 'settings' ? 'active' : ''}><Settings /> Settings</a>
       </div>

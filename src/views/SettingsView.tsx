@@ -1,7 +1,7 @@
 import { Monitor, Moon, Sun } from 'lucide-react'
 import { useState } from 'react'
 import { useStore } from '../data/store'
-import { MODEL_OPTIONS, type Settings } from '../lib/settings'
+import { MODEL_OPTIONS, TEXT_SCALES, WIDTHS, type Settings } from '../lib/settings'
 import { GitHubSource } from '../data/source'
 
 export function SettingsView() {
@@ -90,6 +90,27 @@ export function SettingsView() {
           <button className={settings.theme === 'light' ? 'on' : ''} onClick={() => updateSettings({ theme: 'light' })}><Sun /> Light</button>
           <button className={settings.theme === 'dark' ? 'on' : ''} onClick={() => updateSettings({ theme: 'dark' })}><Moon /> Dark</button>
         </div>
+        <div className="field" style={{ marginTop: 18 }}>
+          <label>Text size</label>
+          <div className="seg">
+            {TEXT_SCALES.map((t) => (
+              <button key={t.value} className={Math.abs(settings.textScale - t.value) < 1e-6 ? 'on' : ''} onClick={() => updateSettings({ textScale: t.value })}>{t.label}</button>
+            ))}
+          </div>
+          <span className="hint">Scales the text only. Your browser's zoom (⌘ + / ⌘ −) scales everything.</span>
+        </div>
+        <div className="field">
+          <label>Page width</label>
+          <div className="seg">
+            {WIDTHS.map((w) => (
+              <button key={w.value} className={settings.width === w.value ? 'on' : ''} onClick={() => updateSettings({ width: w.value })}>{w.label}</button>
+            ))}
+          </div>
+          <span className="hint">Standard keeps lines short for reading; Wide and Full use more of a large screen.</span>
+        </div>
+        <label className="row" style={{ gap: 8, fontSize: 'calc(14px * var(--text-scale, 1))' }}>
+          <input type="checkbox" checked={settings.showOverview} onChange={(e) => updateSettings({ showOverview: e.target.checked })} /> Show the horizontal overview above the timeline
+        </label>
       </section>
 
       <section className="settings-section">

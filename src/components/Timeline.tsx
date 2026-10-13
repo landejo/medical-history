@@ -12,6 +12,7 @@ interface Props {
   activeId?: string
   hrefForRecord: (id: string) => string
   compact?: boolean
+  emptyText?: string
 }
 
 export function RecordRow({ record, active, href, compact }: { record: MedRecord; active?: boolean; href: string; compact?: boolean }) {
@@ -84,13 +85,13 @@ function EpisodeCluster({ episode, records, activeId, hrefForRecord }: { episode
   )
 }
 
-export function Timeline({ items, activeId, hrefForRecord, compact }: Props) {
+export function Timeline({ items, activeId, hrefForRecord, compact, emptyText }: Props) {
   const groups = groupByMonth(items)
-  if (!groups.length) return <p className="empty">Nothing matches. Clear a filter or try a different search.</p>
+  if (!groups.length) return <p className="empty">{emptyText ?? 'Nothing matches. Clear a filter or try a different search.'}</p>
   return (
     <div className="tl">
       {groups.map((g) => (
-        <section className="tl-month" key={g.key} aria-label={formatMonthLong(g.key)}>
+        <section className="tl-month" key={g.key} id={`m-${g.key}`} aria-label={formatMonthLong(g.key)}>
           <div className="tl-gutter">
             <div className="y" style={g.firstOfYear ? undefined : { visibility: 'hidden', height: compact ? 0 : undefined }}>{g.year}</div>
             <div className="m">{formatMonthLong(g.key).split(' ')[0]}</div>
