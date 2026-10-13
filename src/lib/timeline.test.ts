@@ -61,3 +61,13 @@ describe('buildTimeline', () => {
     expect(groups.map((g) => g.firstOfYear)).toEqual([true, false, false, false, true])
   })
 })
+
+describe('date precision', () => {
+  it('formats month and year precision without inventing a day', async () => {
+    const { formatDate, dayParts } = await import('./format')
+    expect(formatDate('2007-01-01', 'year')).toBe('2007')
+    expect(formatDate('2025-01-01', 'month')).toBe('Jan 2025')
+    expect(formatDate('2025-01-07')).toBe('7 Jan 2025')
+    expect(dayParts('2007-01-01', 'year')).toEqual({ day: '—', weekday: 'approx' })
+  })
+})

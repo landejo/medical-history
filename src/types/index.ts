@@ -77,6 +77,8 @@ export interface MedRecord {
   id: string
   /** ISO date, YYYY-MM-DD */
   date: string
+  /** When only the month or year is known, the day (and month) in `date` are placeholders. */
+  datePrecision?: 'day' | 'month' | 'year'
   type: RecordType
   title: string
   provider?: Provider
@@ -103,6 +105,8 @@ export interface Episode {
   id: string
   title: string
   started: string
+  /** When only the start year or month is known. */
+  startedPrecision?: 'day' | 'month' | 'year'
   ended?: string
   status: EpisodeStatus
   kind: EpisodeKind

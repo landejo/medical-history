@@ -123,7 +123,7 @@ export function DetailPanel({ record, closeHref }: { record: MedRecord; closeHre
             <a className="icon-btn" title="Close" href={closeHref} aria-label="Close"><X /></a>
           </div>
         </div>
-        <div className="when">{formatDate(record.date)}</div>
+        <div className="when">{formatDate(record.date, record.datePrecision)}{record.datePrecision && record.datePrecision !== 'day' ? ' · exact date not on record' : ''}</div>
         <h1>{record.title}</h1>
         {who && <div className="meta">{who}</div>}
         {episode && (

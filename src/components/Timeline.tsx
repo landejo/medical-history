@@ -15,7 +15,7 @@ interface Props {
 }
 
 export function RecordRow({ record, active, href, compact }: { record: MedRecord; active?: boolean; href: string; compact?: boolean }) {
-  const { day, weekday } = dayParts(record.date)
+  const { day, weekday } = dayParts(record.date, record.datePrecision)
   const sentiment = headlineSentiment(record)
   const who = [record.provider?.name, record.provider?.facility].filter(Boolean).join(' · ')
   return (
@@ -48,7 +48,7 @@ function EpisodeCluster({ episode, records, activeId, hrefForRecord }: { episode
         <div>
           <div className="kicker">
             <span>Episode</span>
-            <span className="range">{formatRange(episode.started, episode.ended ?? (episode.status === 'resolved' ? latest.date : undefined))}</span>
+            <span className="range">{formatRange(episode.started, episode.ended ?? (episode.status === 'resolved' ? latest.date : undefined), episode.startedPrecision)}</span>
           </div>
           <div className="title">
             <a href={hrefFor({ name: 'episodes', episodeId: episode.id })}>{episode.title}</a>

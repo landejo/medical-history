@@ -112,7 +112,7 @@ export function ShareView() {
             {g.records.map((r) => (
               <label key={r.id}>
                 <input type="checkbox" checked={sel.has(r.id)} onChange={() => toggle(r.id)} />
-                <span className="mono muted d">{formatDate(r.date)}</span>
+                <span className="mono muted d">{formatDate(r.date, r.datePrecision)}</span>
                 <span>{r.title}<span className="muted small"> · {RECORD_TYPE_LABEL[r.type]}</span></span>
                 <span className="muted small">{(r.attachments ?? []).length ? `${(r.attachments ?? []).length} files` : ''}</span>
               </label>

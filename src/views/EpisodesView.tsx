@@ -28,7 +28,7 @@ export function EpisodesView() {
           <a className="ep-card" key={e.id} href={hrefFor({ name: 'episodes', episodeId: e.id })}>
             <div className="kicker">
               <StatusPill status={e.status} />
-              <span>{formatRange(e.started, e.ended)}</span>
+              <span>{formatRange(e.started, e.ended, e.startedPrecision)}</span>
               <span>· {plural(recs.length, 'record')}</span>
             </div>
             <h2>{e.title}</h2>
@@ -63,7 +63,7 @@ export function EpisodeView({ episodeId, activeId }: { episodeId: string; active
       <div className="ep-hero">
         <div className="kicker">
           <StatusPill status={episode.status} />
-          <span>{formatRange(episode.started, episode.ended)}</span>
+          <span>{formatRange(episode.started, episode.ended, episode.startedPrecision)}</span>
           <span>· {plural(recs.length, 'record')}</span>
         </div>
         <h1>{episode.title}</h1>

@@ -47,7 +47,7 @@ export function buildShareHtml(input: ShareInput): string {
         })
         .join('')
       return `<article>
-  <header><span class="type">${esc(RECORD_TYPE_LABEL[r.type])}</span> <time>${esc(formatDate(r.date))}</time>
+  <header><span class="type">${esc(RECORD_TYPE_LABEL[r.type])}</span> <time>${esc(formatDate(r.date, r.datePrecision))}</time>
   <h2>${esc(r.title)}</h2>
   <p class="meta">${esc([r.provider?.name, r.provider?.specialty, r.provider?.facility].filter(Boolean).join(' · '))}${ep ? ` · Part of: ${esc(ep.title)}` : ''}</p></header>
   <p class="syn">${esc(r.synopsis)}</p>

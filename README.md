@@ -34,7 +34,8 @@ profile.json              name, DOB, conditions, medications, allergies, care te
 episodes/<id>.json        a parent event: title, dates, status, summary
 records/<id>.json         one visit / test / scan / procedure / vaccine / medication / document
 attachments/<record-id>/  images (x-ray, MRI, photos), PDFs, markdown reports
-inbox/                    raw downloads waiting to be processed by Claude Code
+inbox/                    raw downloads waiting to be processed by Claude Code (git-ignored)
+originals/                full-resolution DICOM/TIFF/video, kept on this Mac only (git-ignored)
 index.json                generated: everything merged, the only file the app fetches on load
 ```
 

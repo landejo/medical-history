@@ -6,7 +6,7 @@ import { RECORD_TYPE_LABEL } from '../types'
 
 
 function recordBlock(r: MedRecord): string {
-  const lines = [`### ${formatDate(r.date)} — ${r.title} [${RECORD_TYPE_LABEL[r.type]}] (id: ${r.id})`]
+  const lines = [`### ${formatDate(r.date, r.datePrecision)} — ${r.title} [${RECORD_TYPE_LABEL[r.type]}] (id: ${r.id})`]
   const who = [r.provider?.name, r.provider?.specialty, r.provider?.facility].filter(Boolean).join(', ')
   if (who) lines.push(`Provider: ${who}`)
   if (r.episode) lines.push(`Episode: ${r.episode}`)

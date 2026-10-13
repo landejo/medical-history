@@ -18,7 +18,9 @@ When asked to process `private/inbox/` (or files the user points at):
    - `attachments`: every image/PDF moved into `attachments/<id>/`, with `kind` and a short `label`.
    - `followUp`, `tags`, `source.portal`, `source.importedOn` (today).
 4. Update `private/profile.json` when a record changes medications, conditions, allergies, care team or screening dates.
-5. Move processed originals out of `inbox/` into `attachments/<id>/` (or delete duplicates), run `npm run index`, and commit inside `private/` (stage by explicit path). Push to `medical-history-data` so the hosted app sees it.
+5. Put web-sized copies in `attachments/<id>/` (JPEG ≤2000px via `sips`, PDFs as-is). Move the full-resolution originals (DICOM, TIFF, video) to `private/originals/`, which is git-ignored and stays on this Mac (GitHub rejects files over 100 MB). Run `npm run index`, commit inside `private/` (stage by explicit path), and push to `medical-history-data` so the hosted app sees it.
+6. When only the month or year of an event is known, set `datePrecision` (`month`/`year`) instead of inventing a day. Mark events taken only from Jason's own summary with a `source.portal` starting "Self-reported".
+7. Skip anything that isn't Jason's (the inbox once held his wife's sleep study) and flag it.
 
 ## Pulling from patient portals
 Use the Chrome extension (user's logged-in sessions) or the built-in browser. Downloads require explicit permission each time; save them into `private/inbox/`, then run the workflow above. Never enter credentials.
