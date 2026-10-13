@@ -10,6 +10,7 @@ function recordBlock(r: MedRecord): string {
   const who = [r.provider?.name, r.provider?.specialty, r.provider?.facility].filter(Boolean).join(', ')
   if (who) lines.push(`Provider: ${who}`)
   if (r.episode) lines.push(`Episode: ${r.episode}`)
+  if (r.sites?.length) lines.push(`Body area: ${r.sites.join(', ')}`)
   for (const rel of r.related ?? []) lines.push(`Related to episode ${rel.episode} (not part of it): ${rel.note}`)
   lines.push(`Summary: ${r.synopsis}`)
   if (r.findings?.length) lines.push('Findings: ' + r.findings.map((f) => `${f.text} (${f.sentiment})`).join('; '))
@@ -31,7 +32,7 @@ export function buildSystemPrompt(index: DataIndex, focus?: MedRecord): string {
   if (p.careTeam?.length) parts.push('Care team: ' + p.careTeam.map((c) => `${c.name} (${c.role}${c.facility ? ', ' + c.facility : ''})`).join('; '))
   if (p.screenings?.length) parts.push('Screenings: ' + p.screenings.map((s) => `${s.name} last ${s.last ?? '?'} due ${s.due ?? '?'}`).join('; '))
   if (index.episodes.length) {
-    parts.push('## Episodes (groups of related records)\n' + index.episodes.map((e) => `- ${e.id}: ${e.title} (${e.status}, ${e.started}${e.ended ? ' to ' + e.ended : ' to now'}). ${e.summary}`).join('\n'))
+    parts.push('## Episodes (groups of related records)\n' + index.episodes.map((e) => `- ${e.id}: ${e.title}${e.sites?.length ? ' [' + e.sites.join(', ') + ']' : ''} (${e.status}, ${e.started}${e.ended ? ' to ' + e.ended : ' to now'}). ${e.summary}${(e.related ?? []).map((r) => ` Connected to ${r.episode}: ${r.note}`).join('')}`).join('\n'))
   }
   parts.push('## Records (newest first)\n' + index.records.map(recordBlock).join('\n\n'))
   if (focus) parts.push(`## Currently open\nThe user is looking at the record "${focus.title}" from ${formatDate(focus.date)} (id: ${focus.id}). Assume questions refer to it unless they say otherwise.`)

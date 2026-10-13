@@ -510,9 +510,31 @@ button {
   gap: 12px;
   margin-bottom: 26px;
 }
+.toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+}
 .search {
   position: relative;
+  flex: 1 1 260px;
   max-width: 420px;
+}
+.site-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.site-filter label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.site-filter .select {
+  width: auto;
+  min-width: 190px;
 }
 .search svg {
   position: absolute;

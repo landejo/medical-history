@@ -5,9 +5,25 @@ export interface Filters {
   types: Set<RecordType>
   notableOnly: boolean
   query: string
+  /** Body area, e.g. "Left knee". Empty string means all. */
+  site: string
 }
 
-export const emptyFilters = (): Filters => ({ types: new Set(), notableOnly: false, query: '' })
+export const emptyFilters = (): Filters => ({ types: new Set(), notableOnly: false, query: '', site: '' })
+
+/** A record's body areas: its own, else its episode's. */
+export function recordSites(r: MedRecord, episodesById: Map<string, Episode>): string[] {
+  if (r.sites?.length) return r.sites
+  return (r.episode && episodesById.get(r.episode)?.sites) || []
+}
+
+/** Every body area that appears in the data, alphabetically, with record counts. */
+export function siteCounts(records: MedRecord[], episodes: Episode[]): { site: string; count: number }[] {
+  const byId = new Map(episodes.map((e) => [e.id, e]))
+  const counts = new Map<string, number>()
+  for (const r of records) for (const s of recordSites(r, byId)) counts.set(s, (counts.get(s) ?? 0) + 1)
+  return [...counts].map(([site, count]) => ({ site, count })).sort((a, b) => a.site.localeCompare(b.site))
+}
 
 export function isNotable(r: MedRecord): boolean {
   return (r.findings ?? []).some((f) => f.sentiment !== 'neutral')
@@ -41,10 +57,27 @@ export function matchesQuery(r: MedRecord, query: string): boolean {
   return q.split(/\s+/).every((word) => hay.includes(word))
 }
 
-export function filterRecords(records: MedRecord[], f: Filters): MedRecord[] {
+export function filterRecords(records: MedRecord[], f: Filters, episodes: Episode[] = []): MedRecord[] {
+  const byId = new Map(episodes.map((e) => [e.id, e]))
   return records.filter(
-    (r) => (f.types.size === 0 || f.types.has(r.type)) && (!f.notableOnly || isNotable(r)) && matchesQuery(r, f.query),
+    (r) =>
+      (f.types.size === 0 || f.types.has(r.type)) &&
+      (!f.notableOnly || isNotable(r)) &&
+      (!f.site || recordSites(r, byId).includes(f.site)) &&
+      matchesQuery(r, f.query),
   )
+}
+
+/** Episodes connected to `id` in either direction, with the note from whichever side declared it. */
+export function connectedEpisodes(episodes: Episode[], id: string): { episode: Episode; note: string }[] {
+  const byId = new Map(episodes.map((e) => [e.id, e]))
+  const out = new Map<string, string>()
+  for (const rel of byId.get(id)?.related ?? []) out.set(rel.episode, rel.note)
+  for (const e of episodes) for (const rel of e.related ?? []) if (rel.episode === id && !out.has(e.id)) out.set(e.id, rel.note)
+  return [...out]
+    .filter(([eid]) => byId.has(eid))
+    .map(([eid, note]) => ({ episode: byId.get(eid)!, note }))
+    .sort((a, b) => (a.episode.started < b.episode.started ? -1 : 1))
 }
 
 export type TimelineItem =

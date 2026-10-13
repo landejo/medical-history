@@ -30,3 +30,14 @@ describe('buildIndex related links', () => {
     expect(errors.some((e) => e.includes('b: related episode "liver" is already its own episode'))).toBe(true)
   })
 })
+
+describe('buildIndex episode links', () => {
+  it('rejects episode links to unknown or self episodes', () => {
+    const root = fixture([])
+    writeFileSync(join(root, 'episodes', 'oa.json'), JSON.stringify({ id: 'oa', title: 'OA', started: '2005-01-01', status: 'monitoring', kind: 'condition', summary: '', related: [{ episode: 'liver', note: 'ok' }, { episode: 'ghost', note: '' }, { episode: 'oa', note: '' }] }))
+    const { errors } = buildIndex(root)
+    expect(errors).toContain('episode oa: related to unknown episode "ghost"')
+    expect(errors).toContain('episode oa: related to itself')
+    expect(errors.filter((e) => e.includes('"liver"'))).toEqual([])
+  })
+})

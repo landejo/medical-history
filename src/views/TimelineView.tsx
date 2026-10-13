@@ -4,7 +4,7 @@ import { Timeline } from '../components/Timeline'
 import { useStore } from '../data/store'
 import { daysBetween, formatDate, todayIso } from '../lib/format'
 import { hrefFor } from '../lib/router'
-import { buildTimeline, countByType, emptyFilters, filterRecords, isNotable, type Filters } from '../lib/timeline'
+import { buildTimeline, countByType, emptyFilters, filterRecords, isNotable, siteCounts, type Filters } from '../lib/timeline'
 import { RECORD_TYPES, RECORD_TYPE_LABEL, type DataIndex, type RecordType } from '../types'
 
 function Glance({ index }: { index: DataIndex }) {
@@ -50,7 +50,8 @@ export function TimelineView({ activeId }: { activeId?: string }) {
   const [grouped, setGrouped] = useState(true)
   const records = useMemo(() => index?.records ?? [], [index])
   const counts = useMemo(() => countByType(records), [records])
-  const filtered = useMemo(() => filterRecords(records, filters), [records, filters])
+  const filtered = useMemo(() => filterRecords(records, filters, index?.episodes), [records, filters, index])
+  const sites = useMemo(() => siteCounts(records, index?.episodes ?? []), [records, index])
   const items = useMemo(() => buildTimeline(filtered, index?.episodes ?? [], grouped), [filtered, index, grouped])
   const notableCount = useMemo(() => records.filter(isNotable).length, [records])
   if (!index) return null
@@ -76,9 +77,23 @@ export function TimelineView({ activeId }: { activeId?: string }) {
       </div>
       <Glance index={index} />
       <div className="toolbar">
+        <div className="toolbar-row">
         <div className="search">
           <Search />
           <input className="input" type="search" placeholder="Search records, findings, doctors…" value={filters.query} onChange={(e) => setFilters((f) => ({ ...f, query: e.target.value }))} />
+        </div>
+        {sites.length > 0 && (
+          <div className="site-filter">
+            <label htmlFor="site">Body area</label>
+            <select id="site" className="select" value={filters.site} onChange={(e) => setFilters((f) => ({ ...f, site: e.target.value }))}>
+              <option value="">All body areas</option>
+              {sites.map((s) => (
+                <option key={s.site} value={s.site}>{s.site} ({s.count})</option>
+              ))}
+            </select>
+            {filters.site && <button className="btn ghost sm" onClick={() => setFilters((f) => ({ ...f, site: '' }))}>Clear</button>}
+          </div>
+        )}
         </div>
         <div className="chips">
           <button className={`chip ${filters.types.size === 0 ? 'on' : ''}`} onClick={() => setFilters((f) => ({ ...f, types: new Set() }))}>All <span className="n">{records.length}</span></button>

@@ -135,7 +135,7 @@ export function DetailPanel({ record, closeHref }: { record: MedRecord; closeHre
           const ep = index?.episodes.find((e) => e.id === rel.episode)
           return ep ? (
             <a key={rel.episode} className="ep-link related" href={hrefFor({ name: 'episodes', episodeId: ep.id })} title={rel.note}>
-              <Layers /> Possible early signal for: {ep.title} <ChevronRight />
+              <Layers /> Related to: {ep.title} <ChevronRight />
             </a>
           ) : null
         })}

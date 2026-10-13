@@ -46,6 +46,10 @@ export function buildIndex(root) {
   }
   for (const e of episodes) {
     if (!isoDate.test(e.started ?? '')) errors.push(`episode ${e.id}: started must be YYYY-MM-DD`)
+    for (const rel of e.related ?? []) {
+      if (!episodeIds.has(rel.episode)) errors.push(`episode ${e.id}: related to unknown episode "${rel.episode}"`)
+      if (rel.episode === e.id) errors.push(`episode ${e.id}: related to itself`)
+    }
   }
   records.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : a.id.localeCompare(b.id)))
   episodes.sort((a, b) => (a.started < b.started ? 1 : -1))

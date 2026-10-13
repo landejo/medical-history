@@ -86,6 +86,8 @@ export interface MedRecord {
   episode?: string
   /** Episodes this record is connected to without being part of them, e.g. an early signal. */
   related?: { episode: string; note: string }[]
+  /** Body areas this record concerns, e.g. "Left knee". Defaults to its episode's sites. */
+  sites?: string[]
   /** Plain-English summary. */
   synopsis: string
   findings?: Finding[]
@@ -114,6 +116,10 @@ export interface Episode {
   kind: EpisodeKind
   summary: string
   tags?: string[]
+  /** Body areas this episode concerns, e.g. ["Left knee"]. Used by the timeline's body-area filter. */
+  sites?: string[]
+  /** Other episodes this one is connected to, e.g. an injury that led to arthritis. Shown on both sides. */
+  related?: { episode: string; note: string }[]
 }
 
 export interface Profile {

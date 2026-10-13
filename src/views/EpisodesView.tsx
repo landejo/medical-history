@@ -5,7 +5,7 @@ import { FindingTag, StatusPill } from '../components/Tag'
 import { useStore } from '../data/store'
 import { formatDate, formatRange, plural } from '../lib/format'
 import { hrefFor } from '../lib/router'
-import { buildTimeline, recordsForEpisode } from '../lib/timeline'
+import { buildTimeline, connectedEpisodes, recordsForEpisode } from '../lib/timeline'
 import type { Episode, Sentiment } from '../types'
 
 export function EpisodesView() {
@@ -30,6 +30,7 @@ export function EpisodesView() {
               <StatusPill status={e.status} />
               <span>{formatRange(e.started, e.ended, e.startedPrecision)}</span>
               <span>· {plural(recs.length, 'record')}</span>
+              {e.sites?.length ? <span>· {e.sites.join(', ')}</span> : null}
             </div>
             <h2>{e.title}</h2>
             <p>{e.summary}</p>
@@ -58,6 +59,7 @@ export function EpisodeView({ episodeId, activeId }: { episodeId: string; active
   const related = index.records
     .flatMap((r) => (r.related ?? []).filter((rel) => rel.episode === episode.id).map((rel) => ({ record: r, note: rel.note })))
     .sort((a, b) => (a.record.date < b.record.date ? -1 : 1))
+  const connected = connectedEpisodes(index.episodes, episode.id)
   const imageCount = recs.reduce((n, r) => n + (r.attachments ?? []).filter((a) => a.kind === 'image').length, 0)
   const docCount = recs.reduce((n, r) => n + (r.attachments ?? []).filter((a) => a.kind !== 'image').length + (r.report ? 1 : 0), 0)
   return (
@@ -68,6 +70,7 @@ export function EpisodeView({ episodeId, activeId }: { episodeId: string; active
           <StatusPill status={episode.status} />
           <span>{formatRange(episode.started, episode.ended, episode.startedPrecision)}</span>
           <span>· {plural(recs.length, 'record')}</span>
+          {episode.sites?.length ? <span>· {episode.sites.join(', ')}</span> : null}
         </div>
         <h1>{episode.title}</h1>
         <p className="summary">{episode.summary}</p>
@@ -79,9 +82,22 @@ export function EpisodeView({ episodeId, activeId }: { episodeId: string; active
           <a className="btn" href={hrefFor({ name: 'add', episodeId: episode.id })} style={{ marginTop: 8 }}><Plus /> Add a record to this episode</a>
         </div>
         <div>
+          {connected.length > 0 && (
+            <div className="aside-card">
+              <h3>Connected episodes</h3>
+              <ul className="list related-list">
+                {connected.map(({ episode: c, note }) => (
+                  <li key={c.id}>
+                    <a href={hrefFor({ name: 'episodes', episodeId: c.id })}>{c.title}</a>
+                    <span className="muted small">{note}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           {related.length > 0 && (
             <div className="aside-card">
-              <h3>Possible early signals</h3>
+              <h3>Related records</h3>
               <ul className="list related-list">
                 {related.map(({ record, note }) => (
                   <li key={record.id}>

@@ -71,3 +71,30 @@ describe('date precision', () => {
     expect(dayParts('2007-01-01', 'year')).toEqual({ day: '—', weekday: 'approx' })
   })
 })
+
+describe('body areas and connected episodes', () => {
+  const eps: Episode[] = [
+    { id: 'l-acl', title: 'Left ACL', started: '1996-05-10', status: 'resolved', kind: 'injury', summary: '', sites: ['Left knee'] },
+    { id: 'l-oa', title: 'Left OA', started: '2005-06-28', status: 'monitoring', kind: 'condition', summary: '', sites: ['Left knee'], related: [{ episode: 'l-acl', note: 'followed the ACL injuries' }] },
+    { id: 'r-oa', title: 'Right OA', started: '2005-06-28', status: 'monitoring', kind: 'condition', summary: '', sites: ['Right knee'] },
+  ]
+  const recs = [
+    rec('a', '1996-05-10', { episode: 'l-acl' }),
+    rec('b', '2024-09-25', { episode: 'l-oa' }),
+    rec('c', '2024-07-10', { episode: 'r-oa' }),
+    rec('d', '2024-03-19', { sites: ['Left knee', 'Right knee'] }),
+    rec('e', '2019-02-13'),
+  ]
+  it('filters by body area using record sites, falling back to the episode', async () => {
+    const { filterRecords, siteCounts } = await import('./timeline')
+    const f = { ...emptyFilters(), site: 'Left knee' }
+    expect(filterRecords(recs, f, eps).map((r) => r.id)).toEqual(['a', 'b', 'd'])
+    expect(siteCounts(recs, eps)).toEqual([{ site: 'Left knee', count: 3 }, { site: 'Right knee', count: 2 }])
+  })
+  it('finds connected episodes from either side', async () => {
+    const { connectedEpisodes } = await import('./timeline')
+    expect(connectedEpisodes(eps, 'l-acl').map((c) => [c.episode.id, c.note])).toEqual([['l-oa', 'followed the ACL injuries']])
+    expect(connectedEpisodes(eps, 'l-oa').map((c) => c.episode.id)).toEqual(['l-acl'])
+    expect(connectedEpisodes(eps, 'r-oa')).toEqual([])
+  })
+})
